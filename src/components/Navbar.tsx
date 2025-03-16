@@ -3,13 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
 
 const navItems = [
   { label: 'Mission Control', path: '/' },
@@ -46,40 +39,35 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-space-blue/90 backdrop-blur-md shadow-lg py-2'
-          : 'bg-transparent py-4'
+          : 'bg-transparent py-3'
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2 mr-6">
           <div className="relative">
-            <Rocket size={22} className="text-space-purple rotate-45" />
+            <Rocket size={20} className="text-space-purple rotate-45" />
             <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-space-neon rounded-full animate-pulse-glow" />
           </div>
-          <span className="font-orbitron text-base font-bold tracking-wider bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
+          <span className="font-orbitron text-sm font-bold tracking-wider bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
             iSPACE
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center">
-          <Menubar className="border-none bg-transparent flex gap-1 p-0">
-            {navItems.map((item) => (
-              <MenubarMenu key={item.path}>
-                <MenubarTrigger asChild>
-                  <Link
-                    to={item.path}
-                    className={`text-xs uppercase tracking-wider font-orbitron px-3 py-1.5 rounded-md transition-colors duration-200 ${
-                      location.pathname === item.path
-                        ? 'text-white bg-space-purple/20'
-                        : 'text-gray-300 hover:text-white hover:bg-space-blue-light/30'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </MenubarTrigger>
-              </MenubarMenu>
-            ))}
-          </Menubar>
+        <div className="hidden md:flex items-center space-x-1">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`px-2.5 py-1 text-[10px] uppercase tracking-wide font-orbitron rounded transition-all duration-200 ${
+                location.pathname === item.path
+                  ? 'text-white bg-space-purple/30 border-b border-space-purple'
+                  : 'text-gray-300 hover:text-white hover:bg-space-blue-light/20'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile Navigation Toggle */}
