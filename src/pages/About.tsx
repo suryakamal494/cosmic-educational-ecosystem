@@ -4,7 +4,7 @@ import StarryBackground from '@/components/StarryBackground';
 import PlanetAnimation from '@/components/PlanetAnimation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Star, Rocket, Target, Sparkles, LineChart, Briefcase, GraduationCap, Globe } from 'lucide-react';
+import { Star, Rocket, Target, Sparkles, LineChart, Briefcase, GraduationCap, Globe, Users, Award, ChartBar } from 'lucide-react';
 
 const About = () => {
   return (
@@ -45,7 +45,17 @@ const About = () => {
                   iSPACE was established with the mission of making space education accessible to young minds. Powered by a distinguished American space technology company, our team of aerospace engineers, educational specialists, and industry professionals brings unmatched expertise in space innovation and STEM education.
                 </p>
                 
-                <div className="mt-6 h-20 bg-gradient-to-r from-space-blue via-space-purple/30 to-space-blue rounded-lg opacity-50"></div>
+                <div className="mt-6 grid grid-cols-3 gap-2">
+                  <div className="h-16 bg-space-blue-light/30 rounded-lg flex items-center justify-center">
+                    <Rocket className="text-space-purple w-6 h-6" />
+                  </div>
+                  <div className="h-16 bg-space-blue-light/30 rounded-lg flex items-center justify-center">
+                    <Star className="text-space-neon w-6 h-6" />
+                  </div>
+                  <div className="h-16 bg-space-blue-light/30 rounded-lg flex items-center justify-center">
+                    <Sparkles className="text-space-purple-light w-6 h-6" />
+                  </div>
+                </div>
               </div>
               
               <div className="space-card p-8 h-full flex flex-col">
@@ -61,17 +71,15 @@ const About = () => {
                 </p>
                 
                 <div className="grid grid-cols-3 gap-2 mt-6">
-                  {[
-                    { icon: <GraduationCap className="text-space-purple-light w-6 h-6" /> },
-                    { icon: <Globe className="text-space-neon w-6 h-6" /> },
-                    { icon: <Briefcase className="text-space-purple-light w-6 h-6" /> }
-                  ].map((item, i) => (
-                    <div key={i} className="h-20 bg-space-blue-light/30 rounded-lg flex items-center justify-center">
-                      <div className="w-10 h-10 rounded-full bg-space-blue flex items-center justify-center">
-                        {item.icon}
-                      </div>
-                    </div>
-                  ))}
+                  <div className="h-16 bg-space-blue-light/30 rounded-lg flex items-center justify-center">
+                    <GraduationCap className="text-space-purple-light w-6 h-6" />
+                  </div>
+                  <div className="h-16 bg-space-blue-light/30 rounded-lg flex items-center justify-center">
+                    <Globe className="text-space-neon w-6 h-6" />
+                  </div>
+                  <div className="h-16 bg-space-blue-light/30 rounded-lg flex items-center justify-center">
+                    <Briefcase className="text-space-purple-light w-6 h-6" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -85,7 +93,7 @@ const About = () => {
               </div>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-space-blue-light/30 border border-space-purple/10 rounded-lg p-6 flex flex-col items-center text-center">
+                <div className="bg-space-blue-light/30 border border-space-purple/10 rounded-lg p-6 flex flex-col items-center text-center hover:border-space-purple/30 transition-all duration-300 hover:bg-space-blue-light/40">
                   <div className="w-12 h-12 rounded-full bg-space-purple/10 flex items-center justify-center mb-4">
                     <span className="text-xl font-bold text-space-purple">$3T</span>
                   </div>
@@ -94,16 +102,16 @@ const About = () => {
                   </p>
                 </div>
                 
-                <div className="bg-space-blue-light/30 border border-space-purple/10 rounded-lg p-6 flex flex-col items-center text-center">
+                <div className="bg-space-blue-light/30 border border-space-purple/10 rounded-lg p-6 flex flex-col items-center text-center hover:border-space-purple/30 transition-all duration-300 hover:bg-space-blue-light/40">
                   <div className="w-12 h-12 rounded-full bg-space-purple/10 flex items-center justify-center mb-4">
-                    <span className="text-xl font-bold text-space-purple">10%</span>
+                    <ChartBar className="w-6 h-6 text-space-purple" />
                   </div>
                   <p className="text-sm text-gray-300">
                     India aims to expand its space economy to $100 billion by 2040, increasing its global market share from 3.6% to 10% by 2030.
                   </p>
                 </div>
                 
-                <div className="bg-space-blue-light/30 border border-space-purple/10 rounded-lg p-6 flex flex-col items-center text-center">
+                <div className="bg-space-blue-light/30 border border-space-purple/10 rounded-lg p-6 flex flex-col items-center text-center hover:border-space-purple/30 transition-all duration-300 hover:bg-space-blue-light/40">
                   <div className="w-12 h-12 rounded-full bg-space-purple/10 flex items-center justify-center mb-4">
                     <Rocket className="w-6 h-6 text-space-purple" />
                   </div>
@@ -127,12 +135,43 @@ const About = () => {
                 To inspire and equip young learners with skills in space science, fostering India's next generation of space innovators.
               </p>
               
-              <div className="mt-8 grid grid-cols-3 gap-4">
-                {['Innovation', 'Education', 'Exploration'].map((value, index) => (
-                  <div key={index} className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-3 text-center">
-                    <p className="text-sm font-orbitron text-space-purple-light">{value}</p>
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 text-center flex flex-col items-center hover:border-space-purple/30 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-space-purple/20 flex items-center justify-center mb-3">
+                    <Sparkles className="w-6 h-6 text-space-purple" />
                   </div>
-                ))}
+                  <p className="text-sm font-orbitron text-space-purple-light">Innovation</p>
+                </div>
+                
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 text-center flex flex-col items-center hover:border-space-purple/30 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-space-purple/20 flex items-center justify-center mb-3">
+                    <GraduationCap className="w-6 h-6 text-space-purple" />
+                  </div>
+                  <p className="text-sm font-orbitron text-space-purple-light">Education</p>
+                </div>
+                
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 text-center flex flex-col items-center hover:border-space-purple/30 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-space-purple/20 flex items-center justify-center mb-3">
+                    <Rocket className="w-6 h-6 text-space-purple" />
+                  </div>
+                  <p className="text-sm font-orbitron text-space-purple-light">Exploration</p>
+                </div>
+              </div>
+              
+              <div className="mt-8 flex justify-center">
+                <div className="bg-space-blue-light/30 border border-space-purple/20 rounded-lg p-6 max-w-2xl">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center flex-shrink-0">
+                      <Users className="w-5 h-5 text-space-purple" />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-bold mb-1">Our Commitment</h3>
+                      <p className="text-gray-300 text-sm">
+                        We are dedicated to bridging the gap between theoretical knowledge and practical applications in space science education. Through our innovative programs, we aim to inspire curiosity, foster creativity, and develop the skills needed for the next generation of space pioneers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

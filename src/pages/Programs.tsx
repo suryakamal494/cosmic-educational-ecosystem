@@ -4,7 +4,7 @@ import StarryBackground from '@/components/StarryBackground';
 import PlanetAnimation from '@/components/PlanetAnimation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Atom, Rocket, Telescope, Star, Users, Book, Code, Globe } from 'lucide-react';
+import { Atom, Rocket, Telescope, Star, Users, Book, Code, Globe, Award, GraduationCap, Lightbulb, LineChart, Building } from 'lucide-react';
 
 const Programs = () => {
   return (
@@ -25,6 +25,7 @@ const Programs = () => {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {/* Nebula Navigators */}
               <div className="space-card relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-space-purple/10 rounded-full blur-xl" />
                 
@@ -59,6 +60,7 @@ const Programs = () => {
                 </ul>
               </div>
               
+              {/* Orbit Pioneers */}
               <div className="space-card relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-space-neon/10 rounded-full blur-xl" />
                 
@@ -93,6 +95,7 @@ const Programs = () => {
                 </ul>
               </div>
               
+              {/* Starship Innovators */}
               <div className="space-card relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-space-purple-light/10 rounded-full blur-xl" />
                 
@@ -128,83 +131,218 @@ const Programs = () => {
               </div>
             </div>
             
-            {/* How This Course Benefits Students section */}
-            <div className="mt-20 max-w-5xl mx-auto space-card p-8 bg-gradient-to-br from-space-blue-light/40 to-space-blue">
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-space-purple/20 flex items-center justify-center relative">
-                  <Star className="text-space-purple w-8 h-8" />
-                  <div className="absolute inset-0 rounded-full border-2 border-space-purple/30 animate-pulse"></div>
+            {/* How This Course Benefits Students section - Redesigned */}
+            <div className="mt-20 max-w-5xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-block relative mb-4">
+                  <Star className="text-space-purple-light w-8 h-8 animate-pulse-glow" />
+                  <div className="absolute top-0 left-0 w-8 h-8 bg-space-purple/20 rounded-full blur-xl animate-pulse-glow" style={{ animationDelay: '0.5s' }}></div>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-orbitron bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent mb-2">
+                  How This Course Benefits Students
+                </h2>
+                <p className="text-gray-300 max-w-2xl mx-auto text-sm">
+                  Our comprehensive space education program provides students with valuable skills and experiences that extend far beyond the classroom.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Benefit Cards */}
+                <div className="space-card p-6 relative overflow-hidden h-full flex flex-col">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-space-purple/10 via-space-neon/5 to-transparent rounded-full blur-xl"></div>
+                  
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-space-purple/20 flex items-center justify-center">
+                      <GraduationCap className="text-space-purple w-6 h-6" />
+                    </div>
+                    <h3 className="font-orbitron text-base">STEM Skills</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4 flex-grow">
+                    Develops mathematical, analytical, and coding proficiency through hands-on projects and problem-solving activities.
+                  </p>
+                  
+                  <div className="mt-auto pt-4 border-t border-space-purple/10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-space-purple rounded-full"></div>
+                      <span className="text-xs text-space-purple-light">Critical Thinking</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-card p-6 relative overflow-hidden h-full flex flex-col">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-space-neon/10 via-space-purple/5 to-transparent rounded-full blur-xl"></div>
+                  
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-space-neon/20 flex items-center justify-center">
+                      <Rocket className="text-space-neon w-6 h-6" />
+                    </div>
+                    <h3 className="font-orbitron text-base">Real-World Experience</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4 flex-grow">
+                    Encourages students to apply theoretical knowledge through hands-on space experiments, engineering challenges, and collaborative projects.
+                  </p>
+                  
+                  <div className="mt-auto pt-4 border-t border-space-neon/10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-space-neon rounded-full"></div>
+                      <span className="text-xs text-space-neon">Practical Skills</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-card p-6 relative overflow-hidden h-full flex flex-col">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-space-purple-light/10 via-space-purple/5 to-transparent rounded-full blur-xl"></div>
+                  
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-space-purple-light/20 flex items-center justify-center">
+                      <Award className="text-space-purple-light w-6 h-6" />
+                    </div>
+                    <h3 className="font-orbitron text-base">Career Readiness</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4 flex-grow">
+                    Prepares students for space technology careers, university admissions, and scholarships through industry-relevant skills development.
+                  </p>
+                  
+                  <div className="mt-auto pt-4 border-t border-space-purple-light/10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-space-purple-light rounded-full"></div>
+                      <span className="text-xs text-space-purple-light">Future Opportunities</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              <h2 className="text-2xl font-orbitron text-center mb-6">How This Course Benefits Students</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-                {[
-                  { icon: <Book className="w-6 h-6" />, title: "STEM Skills" },
-                  { icon: <Rocket className="w-6 h-6" />, title: "Real-World" },
-                  { icon: <Users className="w-6 h-6" />, title: "Career Ready" },
-                  { icon: <Globe className="w-6 h-6" />, title: "Global Exposure" },
-                  { icon: <Code className="w-6 h-6" />, title: "Innovation" }
-                ].map((item, index) => (
-                  <div key={index} className="bg-space-blue-light/30 border border-space-purple/20 rounded-lg p-3 text-center flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center mb-2">
-                      <div className="text-space-purple">{item.icon}</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div className="space-card p-6 relative overflow-hidden h-full flex flex-col">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-space-purple/10 via-space-neon/5 to-transparent rounded-full blur-xl"></div>
+                  
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-space-purple/20 flex items-center justify-center">
+                      <Globe className="text-space-purple w-6 h-6" />
                     </div>
-                    <p className="text-sm font-orbitron text-space-purple-light">{item.title}</p>
+                    <h3 className="font-orbitron text-base">Global Exposure</h3>
                   </div>
-                ))}
+                  
+                  <p className="text-gray-300 text-sm mb-4 flex-grow">
+                    Offers international collaboration opportunities with partner schools and expert mentorship from leading space industry professionals.
+                  </p>
+                </div>
+                
+                <div className="space-card p-6 relative overflow-hidden h-full flex flex-col">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-space-neon/10 via-space-purple/5 to-transparent rounded-full blur-xl"></div>
+                  
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-space-neon/20 flex items-center justify-center">
+                      <Lightbulb className="text-space-neon w-6 h-6" />
+                    </div>
+                    <h3 className="font-orbitron text-base">Leadership & Innovation</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4 flex-grow">
+                    Enhances teamwork, research capabilities, and problem-solving abilities through space-themed competitions, hackathons, and innovation challenges.
+                  </p>
+                </div>
               </div>
-              
-              <ul className="text-gray-300 space-y-4 mb-4">
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>Strengthened STEM Skills:</strong> Develops mathematical, analytical, and coding proficiency through hands-on projects and problem-solving activities.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>Real-World Application:</strong> Encourages students to apply theoretical knowledge through hands-on space experiments, engineering challenges, and collaborative projects.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>Career Readiness:</strong> Prepares students for space technology careers, university admissions, and scholarships through industry-relevant skills development.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>Global Exposure:</strong> Offers international collaboration opportunities with partner schools and expert mentorship from leading space industry professionals.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>Leadership & Innovation:</strong> Enhances teamwork, research capabilities, and problem-solving abilities through space-themed competitions, hackathons, and innovation challenges.</span>
-                </li>
-              </ul>
             </div>
             
-            <div className="mt-16 max-w-3xl mx-auto space-card p-8">
-              <h2 className="text-2xl font-orbitron text-center mb-6">Why Schools Should Start This Course</h2>
+            {/* Why Schools Should Start This Course section - Redesigned */}
+            <div className="mt-20 max-w-5xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-block relative mb-4">
+                  <Building className="text-space-neon w-8 h-8 animate-pulse-glow" />
+                  <div className="absolute top-0 left-0 w-8 h-8 bg-space-neon/20 rounded-full blur-xl animate-pulse-glow" style={{ animationDelay: '0.5s' }}></div>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-orbitron bg-gradient-to-r from-white via-space-neon to-white bg-clip-text text-transparent mb-2">
+                  Why Schools Should Start This Course
+                </h2>
+                <p className="text-gray-300 max-w-2xl mx-auto text-sm">
+                  Implementing our space education program offers numerous advantages for forward-thinking educational institutions.
+                </p>
+              </div>
               
-              <ul className="text-gray-300 space-y-4 mb-4">
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>Future Relevance:</strong> Space technology is increasingly influencing industries such as weather forecasting, aerospace engineering, telecommunications, remote sensing, navigation, defense, mining, and environmental sustainability.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>STEM Enhancement:</strong> The program strengthens students' skills in mathematics, physics, reasoning, and coding, fostering a strong STEM foundation.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>Career Readiness:</strong> It provides practical exposure to high-demand careers in the space industry and adjacent fields.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>International Recognition:</strong> Schools offering space programs gain recognition on global educational platforms, increasing their academic standing.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-space-purple font-bold">•</span>
-                  <span><strong>Hands-On Learning:</strong> Students engage in DIY space projects, coding exercises, and satellite development, making learning more interactive and impactful.</span>
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Reason Cards */}
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 backdrop-blur-sm transition-all duration-300 hover:border-space-purple/30 hover:bg-space-blue-light/30">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center">
+                      <LineChart className="text-space-purple w-5 h-5" />
+                    </div>
+                    <h3 className="font-orbitron text-sm">Future Relevance</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-xs">
+                    Space technology is increasingly influencing industries such as weather forecasting, aerospace engineering, telecommunications, remote sensing, navigation, defense, mining, and environmental sustainability.
+                  </p>
+                </div>
+                
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 backdrop-blur-sm transition-all duration-300 hover:border-space-purple/30 hover:bg-space-blue-light/30">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center">
+                      <Code className="text-space-purple w-5 h-5" />
+                    </div>
+                    <h3 className="font-orbitron text-sm">STEM Enhancement</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-xs">
+                    The program strengthens students' skills in mathematics, physics, reasoning, and coding, fostering a strong STEM foundation essential for future academic and career success.
+                  </p>
+                </div>
+                
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 backdrop-blur-sm transition-all duration-300 hover:border-space-purple/30 hover:bg-space-blue-light/30">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center">
+                      <Users className="text-space-purple w-5 h-5" />
+                    </div>
+                    <h3 className="font-orbitron text-sm">Career Readiness</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-xs">
+                    It provides practical exposure to high-demand careers in the space industry and adjacent fields, giving students a competitive advantage in their future endeavors.
+                  </p>
+                </div>
+                
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 backdrop-blur-sm transition-all duration-300 hover:border-space-purple/30 hover:bg-space-blue-light/30">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center">
+                      <Award className="text-space-purple w-5 h-5" />
+                    </div>
+                    <h3 className="font-orbitron text-sm">International Recognition</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-xs">
+                    Schools offering space programs gain recognition on global educational platforms, increasing their academic standing and attracting high-quality students and partnerships.
+                  </p>
+                </div>
+                
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 backdrop-blur-sm transition-all duration-300 hover:border-space-purple/30 hover:bg-space-blue-light/30">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center">
+                      <Rocket className="text-space-purple w-5 h-5" />
+                    </div>
+                    <h3 className="font-orbitron text-sm">Hands-On Learning</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-xs">
+                    Students engage in DIY space projects, coding exercises, and satellite development, making learning more interactive, impactful, and engaging for all participants.
+                  </p>
+                </div>
+                
+                <div className="bg-space-blue-light/20 border border-space-purple/10 rounded-lg p-6 backdrop-blur-sm transition-all duration-300 hover:border-space-purple/30 hover:bg-space-blue-light/30">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center">
+                      <Globe className="text-space-purple w-5 h-5" />
+                    </div>
+                    <h3 className="font-orbitron text-sm">Global Network</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-xs">
+                    Schools join an international network of educational institutions focused on space education, opening doors to collaborative projects and shared resources.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

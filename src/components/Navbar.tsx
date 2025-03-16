@@ -3,6 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
 
 const navItems = [
   { label: 'Mission Control', path: '/' },
@@ -45,27 +52,34 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center px-4">
         <Link to="/" className="flex items-center gap-2">
           <div className="relative">
-            <Rocket size={24} className="text-space-purple rotate-45" />
+            <Rocket size={22} className="text-space-purple rotate-45" />
             <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-space-neon rounded-full animate-pulse-glow" />
           </div>
-          <span className="font-orbitron text-lg font-bold tracking-wider bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
+          <span className="font-orbitron text-base font-bold tracking-wider bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
             iSPACE
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`nav-link ${
-                location.pathname === item.path ? 'active' : ''
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center">
+          <Menubar className="border-none bg-transparent flex gap-1 p-0">
+            {navItems.map((item) => (
+              <MenubarMenu key={item.path}>
+                <MenubarTrigger asChild>
+                  <Link
+                    to={item.path}
+                    className={`text-xs uppercase tracking-wider font-orbitron px-3 py-1.5 rounded-md transition-colors duration-200 ${
+                      location.pathname === item.path
+                        ? 'text-white bg-space-purple/20'
+                        : 'text-gray-300 hover:text-white hover:bg-space-blue-light/30'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </MenubarTrigger>
+              </MenubarMenu>
+            ))}
+          </Menubar>
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -90,8 +104,10 @@ const Navbar: React.FC = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`nav-link text-base ${
-                location.pathname === item.path ? 'active' : ''
+              className={`text-sm ${
+                location.pathname === item.path
+                  ? 'text-space-purple font-semibold'
+                  : 'text-gray-300'
               }`}
               onClick={() => setIsOpen(false)}
             >

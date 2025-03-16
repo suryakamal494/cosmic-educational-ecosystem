@@ -7,6 +7,14 @@ import { Linkedin, Star } from 'lucide-react';
 import TeamMember from '@/components/TeamMember';
 
 const Team = () => {
+  // Use placeholder images for now, ideally these would be real photos
+  const yuvarajuImage = "https://media.licdn.com/dms/image/C4D03AQHBs4bJICtH0A/profile-displayphoto-shrink_800_800/0/1516283425064?e=2147483647&v=beta&t=iIEgvnA8Zs1YJx3cBPNb9lB8P8Lzn_RKBvgY6o9DRb0";
+  const suryaImage = "/placeholder.svg"; // Replace with actual image
+  const tanyaImage = "https://www.tanyaknudsen.com/assets/images/tanya-knudsen.jpg";
+  const elisabethImage = "https://media.licdn.com/dms/image/D5603AQGKlgR7Nl8Rmw/profile-displayphoto-shrink_800_800/0/1689188694398?e=2147483647&v=beta&t=tQaNJBTELECJrS_1ZlvPzn7hJnZgPXG-wPcwR0QVrGc";
+  const jamesImage = "https://www.thealumniassociation.com/pics/user/images/4839394-james-maddirala-9c2cb.jpg";
+  const kenImage = "https://media.licdn.com/dms/image/C5603AQEgtNj9z0KJYQ/profile-displayphoto-shrink_800_800/0/1517604913125?e=2147483647&v=beta&t=qM8B_z4DGDgGw-_hx3YTUzIjBCk3aIOmIYwMmZ_i9eQ";
+
   return (
     <div className="min-h-screen bg-space-blue text-white">
       <StarryBackground />
@@ -16,6 +24,11 @@ const Team = () => {
         <section className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
+              <div className="inline-block relative mb-4">
+                <Star className="text-space-purple w-8 h-8 animate-pulse-glow" />
+                <div className="absolute top-0 left-0 w-8 h-8 bg-space-purple/20 rounded-full blur-xl animate-pulse-glow" style={{ animationDelay: '0.5s' }}></div>
+              </div>
+              
               <h1 className="font-orbitron mb-4">
                 <span className="bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
                   Command Crew
@@ -35,7 +48,7 @@ const Team = () => {
                   title="Captain"
                   bio="Co-Founder of iSPACE and a visionary leader in STEM education, space technology, and innovation-driven learning. With a strong background in research, academia, and industry collaborations, he has been instrumental in designing cutting-edge educational programs that bridge the gap between theoretical knowledge and hands-on experience."
                   profileLink="https://www.linkedin.com/in/dr-yuvaraju-chinnam-phd-bb228557/"
-                  imageUrl="/placeholder.svg"
+                  imageUrl={yuvarajuImage}
                 />
                 
                 <TeamMember 
@@ -43,7 +56,7 @@ const Team = () => {
                   title="Co-Captain"
                   bio="Surya Kamal is a seasoned educator and mentor with extensive experience in guiding students toward competitive academic success in the K-12 segment. Having previously led IIT-JEE and NEET programs at esteemed institutions, he has played a pivotal role in shaping the careers of aspiring engineers and medical professionals."
                   profileLink="#"
-                  imageUrl="/placeholder.svg"
+                  imageUrl={suryaImage}
                 />
               </div>
             </div>
@@ -57,7 +70,7 @@ const Team = () => {
                   title="Expert in Creative Problem-Solving"
                   bio="Tanya Knudsen is an expert in creative problem-solving, helping individuals and organizations unlock innovation through structured thinking techniques. With a passion for fostering creativity, she provides workshops, training, and coaching to develop critical thinking, idea generation, and strategic problem-solving skills."
                   profileLink="https://www.tanyaknudsen.com/"
-                  imageUrl="/placeholder.svg"
+                  imageUrl={tanyaImage}
                 />
                 
                 <TeamMember 
@@ -65,7 +78,7 @@ const Team = () => {
                   title="STEM Education & Innovation Leader"
                   bio="An education and innovation leader specializing in STEM education, creative problem-solving, and global learning initiatives. With extensive experience in fostering interdisciplinary collaboration, she has played a key role in developing international educational programs and empowering students with future-ready skills."
                   profileLink="https://www.linkedin.com/in/elisabeth-morney-d-a-bb633055/"
-                  imageUrl="/placeholder.svg"
+                  imageUrl={elisabethImage}
                 />
                 
                 <TeamMember 
@@ -73,7 +86,7 @@ const Team = () => {
                   title="Global Academic Leader in Space Education"
                   bio="A distinguished educator, researcher, and global academic leader with extensive experience in STEM education, international collaborations, and space science initiatives. As a Distinguished Speaker for iSPACE's Young Scientist Initiative, he brings valuable expertise in higher education, research-driven learning, and interdisciplinary problem-solving."
                   profileLink="https://www.thealumniassociation.com/home/4839394-james-maddirala/profile"
-                  imageUrl="/placeholder.svg"
+                  imageUrl={jamesImage}
                 />
                 
                 <TeamMember 
@@ -81,7 +94,7 @@ const Team = () => {
                   title="Higher Education & STEM Policy Expert"
                   bio="An education strategist, researcher, and global advocate for academic excellence with a strong focus on STEM education, leadership, and faculty development. His research on higher education systems and diversity in academia aligns with iSPACE's mission to create inclusive and innovative learning experiences in space education."
                   profileLink="https://news.sou.edu/2020/05/sou-ken-kempner-studies-role-women-faculty-saudi-universities/"
-                  imageUrl="/placeholder.svg"
+                  imageUrl={kenImage}
                 />
               </div>
             </div>
