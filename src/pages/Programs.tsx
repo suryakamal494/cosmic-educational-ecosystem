@@ -1,14 +1,16 @@
 
 import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
+import PlanetAnimation from '@/components/PlanetAnimation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Atom, Rocket, Telescope } from 'lucide-react';
+import { Atom, Rocket, Telescope, Star, Users, Book, Code, Globe } from 'lucide-react';
 
 const Programs = () => {
   return (
     <div className="min-h-screen bg-space-blue text-white">
       <StarryBackground />
+      <PlanetAnimation />
       <Navbar />
       
       <main className="pt-20">
@@ -126,7 +128,59 @@ const Programs = () => {
               </div>
             </div>
             
-            <div className="mt-20 max-w-3xl mx-auto space-card p-8">
+            {/* How This Course Benefits Students section */}
+            <div className="mt-20 max-w-5xl mx-auto space-card p-8 bg-gradient-to-br from-space-blue-light/40 to-space-blue">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 rounded-full bg-space-purple/20 flex items-center justify-center relative">
+                  <Star className="text-space-purple w-8 h-8" />
+                  <div className="absolute inset-0 rounded-full border-2 border-space-purple/30 animate-pulse"></div>
+                </div>
+              </div>
+              
+              <h2 className="text-2xl font-orbitron text-center mb-6">How This Course Benefits Students</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+                {[
+                  { icon: <Book className="w-6 h-6" />, title: "STEM Skills" },
+                  { icon: <Rocket className="w-6 h-6" />, title: "Real-World" },
+                  { icon: <Users className="w-6 h-6" />, title: "Career Ready" },
+                  { icon: <Globe className="w-6 h-6" />, title: "Global Exposure" },
+                  { icon: <Code className="w-6 h-6" />, title: "Innovation" }
+                ].map((item, index) => (
+                  <div key={index} className="bg-space-blue-light/30 border border-space-purple/20 rounded-lg p-3 text-center flex flex-col items-center">
+                    <div className="w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center mb-2">
+                      <div className="text-space-purple">{item.icon}</div>
+                    </div>
+                    <p className="text-sm font-orbitron text-space-purple-light">{item.title}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <ul className="text-gray-300 space-y-4 mb-4">
+                <li className="flex gap-3">
+                  <span className="text-space-purple font-bold">•</span>
+                  <span><strong>Strengthened STEM Skills:</strong> Develops mathematical, analytical, and coding proficiency through hands-on projects and problem-solving activities.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-space-purple font-bold">•</span>
+                  <span><strong>Real-World Application:</strong> Encourages students to apply theoretical knowledge through hands-on space experiments, engineering challenges, and collaborative projects.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-space-purple font-bold">•</span>
+                  <span><strong>Career Readiness:</strong> Prepares students for space technology careers, university admissions, and scholarships through industry-relevant skills development.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-space-purple font-bold">•</span>
+                  <span><strong>Global Exposure:</strong> Offers international collaboration opportunities with partner schools and expert mentorship from leading space industry professionals.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-space-purple font-bold">•</span>
+                  <span><strong>Leadership & Innovation:</strong> Enhances teamwork, research capabilities, and problem-solving abilities through space-themed competitions, hackathons, and innovation challenges.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="mt-16 max-w-3xl mx-auto space-card p-8">
               <h2 className="text-2xl font-orbitron text-center mb-6">Why Schools Should Start This Course</h2>
               
               <ul className="text-gray-300 space-y-4 mb-4">

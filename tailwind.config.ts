@@ -76,7 +76,7 @@ export default {
 			},
 			fontFamily: {
 				'orbitron': ['Orbitron', 'sans-serif'],
-				'rajdhani': ['Rajdhani', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -115,6 +115,10 @@ export default {
 				'orbit': {
 					'0%': { transform: 'rotate(0deg) translateX(10px) rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg) translateX(10px) rotate(-360deg)' }
+				},
+				'planet-rotate': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -123,7 +127,8 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
 				'star-twinkle': 'star-twinkle 4s ease-in-out infinite',
-				'orbit': 'orbit 20s linear infinite'
+				'orbit': 'orbit 20s linear infinite',
+				'planet-rotate': 'planet-rotate 60s linear infinite'
 			},
 			backgroundImage: {
 				'space-gradient': 'linear-gradient(to right, #0F172A, #1E293B, #0F172A)',

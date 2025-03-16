@@ -47,7 +47,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {subtitle}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               asChild
               className="space-button group"
@@ -55,15 +55,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               <a href={ctaLink} className="flex items-center gap-2">
                 {ctaText}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              className="border-space-purple/50 text-white hover:bg-space-purple/20 hover:text-white"
-            >
-              <a href="/about" className="flex items-center gap-2">
-                Discover Our Mission
               </a>
             </Button>
           </div>

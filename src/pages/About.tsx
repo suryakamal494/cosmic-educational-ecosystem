@@ -1,14 +1,16 @@
 
 import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
+import PlanetAnimation from '@/components/PlanetAnimation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Star, Rocket, Target, Sparkles, LineChart } from 'lucide-react';
+import { Star, Rocket, Target, Sparkles, LineChart, Briefcase, GraduationCap, Globe } from 'lucide-react';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-space-blue text-white">
       <StarryBackground />
+      <PlanetAnimation />
       <Navbar />
       
       <main className="pt-24 pb-20">
@@ -59,9 +61,15 @@ const About = () => {
                 </p>
                 
                 <div className="grid grid-cols-3 gap-2 mt-6">
-                  {[1, 2, 3].map((i) => (
+                  {[
+                    { icon: <GraduationCap className="text-space-purple-light w-6 h-6" /> },
+                    { icon: <Globe className="text-space-neon w-6 h-6" /> },
+                    { icon: <Briefcase className="text-space-purple-light w-6 h-6" /> }
+                  ].map((item, i) => (
                     <div key={i} className="h-20 bg-space-blue-light/30 rounded-lg flex items-center justify-center">
-                      <div className="w-10 h-10 rounded-full bg-space-purple/20"></div>
+                      <div className="w-10 h-10 rounded-full bg-space-blue flex items-center justify-center">
+                        {item.icon}
+                      </div>
                     </div>
                   ))}
                 </div>

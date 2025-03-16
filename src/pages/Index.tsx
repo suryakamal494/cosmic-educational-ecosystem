@@ -1,6 +1,7 @@
 
 import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
+import PlanetAnimation from '@/components/PlanetAnimation';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ProgramsSection from '@/components/ProgramsSection';
@@ -13,6 +14,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-space-blue text-white overflow-hidden">
       <StarryBackground />
+      <PlanetAnimation />
       <Navbar />
       
       <main>

@@ -45,10 +45,10 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center px-4">
         <Link to="/" className="flex items-center gap-2">
           <div className="relative">
-            <Rocket size={28} className="text-space-purple rotate-45" />
+            <Rocket size={24} className="text-space-purple rotate-45" />
             <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-space-neon rounded-full animate-pulse-glow" />
           </div>
-          <span className="font-orbitron text-xl font-bold tracking-wider bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
+          <span className="font-orbitron text-lg font-bold tracking-wider bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
             iSPACE
           </span>
         </Link>
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`nav-link text-lg ${
+              className={`nav-link text-base ${
                 location.pathname === item.path ? 'active' : ''
               }`}
               onClick={() => setIsOpen(false)}
