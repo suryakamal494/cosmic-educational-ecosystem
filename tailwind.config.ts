@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				space: {
+					'blue': '#0F172A',
+					'blue-light': '#1E293B',
+					'purple': '#8B5CF6',
+					'purple-light': '#D6BCFA',
+					'purple-dark': '#7E69AB',
+					'neon': '#F97316',
+					'black': '#000000',
+					'white': '#FFFFFF',
 				}
+			},
+			fontFamily: {
+				'orbitron': ['Orbitron', 'sans-serif'],
+				'rajdhani': ['Rajdhani', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +99,37 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.6' }
+				},
+				'star-twinkle': {
+					'0%, 100%': { opacity: '1', transform: 'scale(1)' },
+					'50%': { opacity: '0.5', transform: 'scale(0.8)' }
+				},
+				'orbit': {
+					'0%': { transform: 'rotate(0deg) translateX(10px) rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg) translateX(10px) rotate(-360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+				'star-twinkle': 'star-twinkle 4s ease-in-out infinite',
+				'orbit': 'orbit 20s linear infinite'
+			},
+			backgroundImage: {
+				'space-gradient': 'linear-gradient(to right, #0F172A, #1E293B, #0F172A)',
+				'hero-gradient': 'linear-gradient(90deg, rgba(139,92,246,0.15) 0%, rgba(126,105,171,0.3) 50%, rgba(15,23,42,0.6) 100%)',
+				'card-gradient': 'linear-gradient(135deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%)',
+				'glow-gradient': 'radial-gradient(circle, rgba(139,92,246,0.4) 0%, rgba(15,23,42,0) 70%)',
 			}
 		}
 	},
