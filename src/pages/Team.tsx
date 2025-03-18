@@ -3,7 +3,7 @@ import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Linkedin, Star } from 'lucide-react';
+import { Linkedin, Star, Award, Users } from 'lucide-react';
 import TeamMember from '@/components/TeamMember';
 import { motion } from 'framer-motion';
 
@@ -16,6 +16,12 @@ const Team = () => {
   const elisabethImage = "https://media.licdn.com/dms/image/D5603AQGKlgR7Nl8Rmw/profile-displayphoto-shrink_800_800/0/1689188694398?e=2147483647&v=beta&t=tQaNJBTELECJrS_1ZlvPzn7hJnZgPXG-wPcwR0QVrGc";
   const kenImage = "https://media.licdn.com/dms/image/C5603AQEgtNj9z0KJYQ/profile-displayphoto-shrink_800_800/0/1517604913125?e=2147483647&v=beta&t=qM8B_z4DGDgGw-_hx3YTUzIjBCk3aIOmIYwMmZ_i9eQ";
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   return (
     <div className="min-h-screen bg-space-blue text-white">
       <StarryBackground />
@@ -23,7 +29,7 @@ const Team = () => {
       
       <main className="pt-24 pb-20">
         <section className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
@@ -31,11 +37,11 @@ const Team = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="inline-block relative mb-4">
-                <Star className="text-space-purple w-8 h-8 animate-pulse-glow" />
+                <Users className="text-space-purple w-8 h-8 animate-pulse-glow" />
                 <div className="absolute top-0 left-0 w-8 h-8 bg-space-purple/20 rounded-full blur-xl animate-pulse-glow" style={{ animationDelay: '0.5s' }}></div>
               </div>
               
-              <h1 className="font-orbitron mb-4">
+              <h1 className="font-orbitron mb-6 text-4xl md:text-5xl">
                 <span className="bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
                   Command Crew
                 </span>
@@ -46,12 +52,15 @@ const Team = () => {
             </motion.div>
             
             <motion.div 
-              className="space-card p-8 mb-12"
+              className="bg-space-blue-light/5 backdrop-blur-sm border border-space-purple/10 rounded-2xl p-8 shadow-lg mb-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <h2 className="text-2xl font-orbitron mb-8 text-center">Leadership</h2>
+              <div className="flex items-center justify-center gap-2 mb-8">
+                <Award className="text-space-purple h-6 w-6" />
+                <h2 className="text-2xl font-orbitron font-bold text-center">Leadership</h2>
+              </div>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <TeamMember 
@@ -73,12 +82,15 @@ const Team = () => {
             </motion.div>
             
             <motion.div 
-              className="space-card p-8"
+              className="bg-space-blue-light/5 backdrop-blur-sm border border-space-purple/10 rounded-2xl p-8 shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              <h2 className="text-2xl font-orbitron mb-8 text-center">Mentors & Advisors</h2>
+              <div className="flex items-center justify-center gap-2 mb-8">
+                <Star className="text-space-purple h-6 w-6" />
+                <h2 className="text-2xl font-orbitron font-bold text-center">Mentors & Advisors</h2>
+              </div>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <TeamMember 
