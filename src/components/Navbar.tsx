@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 const navItems = [
   { label: 'Mission Control', path: '/' },
@@ -43,7 +44,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4">
-        <Link to="/" className="flex items-center gap-2 mr-6">
+        <Link to="/" className="flex items-center gap-2 min-w-[100px]">
           <div className="relative">
             <Rocket size={20} className="text-space-purple rotate-45" />
             <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-space-neon rounded-full animate-pulse-glow" />
@@ -54,20 +55,22 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-1">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`px-2.5 py-1 text-[10px] uppercase tracking-wide font-orbitron rounded transition-all duration-200 ${
-                location.pathname === item.path
-                  ? 'text-white bg-space-purple/30 border-b border-space-purple'
-                  : 'text-gray-300 hover:text-white hover:bg-space-blue-light/20'
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center">
+          <motion.div className="flex flex-wrap justify-center">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`px-2 py-0.5 mx-0.5 text-[9px] uppercase tracking-wide font-orbitron rounded transition-all duration-200 ${
+                  location.pathname === item.path
+                    ? 'text-white bg-space-purple/30 border-b border-space-purple'
+                    : 'text-gray-300 hover:text-white hover:bg-space-blue-light/20'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </motion.div>
         </div>
 
         {/* Mobile Navigation Toggle */}

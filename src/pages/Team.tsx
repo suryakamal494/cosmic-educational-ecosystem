@@ -5,14 +5,15 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Linkedin, Star } from 'lucide-react';
 import TeamMember from '@/components/TeamMember';
+import { motion } from 'framer-motion';
 
 const Team = () => {
-  // Use placeholder images for now, ideally these would be real photos
-  const yuvarajuImage = "https://media.licdn.com/dms/image/C4D03AQHBs4bJICtH0A/profile-displayphoto-shrink_800_800/0/1516283425064?e=2147483647&v=beta&t=iIEgvnA8Zs1YJx3cBPNb9lB8P8Lzn_RKBvgY6o9DRb0";
-  const suryaImage = "/placeholder.svg"; // Replace with actual image
+  // Using the provided images
+  const suryaImage = "/lovable-uploads/5bc0243f-8a22-4a15-b822-217c965a0ec8.png";
+  const yuvarajuImage = "/lovable-uploads/75d2629a-b1b1-474d-bdc5-d882d9980006.png";
+  const jamesImage = "/lovable-uploads/d21584d8-0b9c-416d-88f9-c73f29c479d7.png";
   const tanyaImage = "https://www.tanyaknudsen.com/assets/images/tanya-knudsen.jpg";
   const elisabethImage = "https://media.licdn.com/dms/image/D5603AQGKlgR7Nl8Rmw/profile-displayphoto-shrink_800_800/0/1689188694398?e=2147483647&v=beta&t=tQaNJBTELECJrS_1ZlvPzn7hJnZgPXG-wPcwR0QVrGc";
-  const jamesImage = "https://www.thealumniassociation.com/pics/user/images/4839394-james-maddirala-9c2cb.jpg";
   const kenImage = "https://media.licdn.com/dms/image/C5603AQEgtNj9z0KJYQ/profile-displayphoto-shrink_800_800/0/1517604913125?e=2147483647&v=beta&t=qM8B_z4DGDgGw-_hx3YTUzIjBCk3aIOmIYwMmZ_i9eQ";
 
   return (
@@ -23,7 +24,12 @@ const Team = () => {
       <main className="pt-24 pb-20">
         <section className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
               <div className="inline-block relative mb-4">
                 <Star className="text-space-purple w-8 h-8 animate-pulse-glow" />
                 <div className="absolute top-0 left-0 w-8 h-8 bg-space-purple/20 rounded-full blur-xl animate-pulse-glow" style={{ animationDelay: '0.5s' }}></div>
@@ -37,31 +43,41 @@ const Team = () => {
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Meet the visionaries, educators, and space enthusiasts behind iSPACE who are dedicated to inspiring the next generation of space pioneers.
               </p>
-            </div>
+            </motion.div>
             
-            <div className="space-card p-8 mb-12">
+            <motion.div 
+              className="space-card p-8 mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
               <h2 className="text-2xl font-orbitron mb-8 text-center">Leadership</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <TeamMember 
-                  name="Dr. Yuvaraju Chinnam, Ph.D."
-                  title="Captain"
-                  bio="Co-Founder of iSPACE and a visionary leader in STEM education, space technology, and innovation-driven learning. With a strong background in research, academia, and industry collaborations, he has been instrumental in designing cutting-edge educational programs that bridge the gap between theoretical knowledge and hands-on experience."
-                  profileLink="https://www.linkedin.com/in/dr-yuvaraju-chinnam-phd-bb228557/"
-                  imageUrl={yuvarajuImage}
-                />
-                
-                <TeamMember 
                   name="Suryakamal B."
-                  title="Co-Captain"
+                  title="CEO"
                   bio="Surya Kamal is a seasoned educator and mentor with extensive experience in guiding students toward competitive academic success in the K-12 segment. Having previously led IIT-JEE and NEET programs at esteemed institutions, he has played a pivotal role in shaping the careers of aspiring engineers and medical professionals."
                   profileLink="#"
                   imageUrl={suryaImage}
                 />
+                
+                <TeamMember 
+                  name="Dr. Yuvaraju Chinnam, Ph.D."
+                  title="Head Strategy and Innovation"
+                  bio="Co-Founder of iSPACE and a visionary leader in STEM education, space technology, and innovation-driven learning. With a strong background in research, academia, and industry collaborations, he has been instrumental in designing cutting-edge educational programs that bridge the gap between theoretical knowledge and hands-on experience."
+                  profileLink="https://www.linkedin.com/in/dr-yuvaraju-chinnam-phd-bb228557/"
+                  imageUrl={yuvarajuImage}
+                />
               </div>
-            </div>
+            </motion.div>
             
-            <div className="space-card p-8">
+            <motion.div 
+              className="space-card p-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
               <h2 className="text-2xl font-orbitron mb-8 text-center">Mentors & Advisors</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -97,7 +113,7 @@ const Team = () => {
                   imageUrl={kenImage}
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       </main>
