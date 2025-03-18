@@ -5,7 +5,7 @@ import PlanetAnimation from '@/components/PlanetAnimation';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ProgramsSection from '@/components/ProgramsSection';
-import VisionSection from '@/components/VisionSection';
+import AboutSection from '@/components/AboutSection';
 import PartnersSection from '@/components/PartnersSection';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
@@ -19,15 +19,15 @@ const Index = () => {
       
       <main>
         <HeroSection 
-          title="Igniting Young Minds, Launching Future Space Leaders"
-          subtitle="We empower schools to provide top-notch space education through our expert-driven curriculum, international collaborations, and hands-on learning experiences."
+          title="Young Scientist Initiative"
+          subtitle="Cultivating India's next generation of space innovators through immersive education, hands-on experience, and global collaboration."
           ctaText="Explore Our Programs"
           ctaLink="/programs"
         />
         
         <ProgramsSection />
         
-        <VisionSection />
+        <AboutSection />
         
         <PartnersSection />
         
