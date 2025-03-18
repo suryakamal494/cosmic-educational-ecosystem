@@ -1,16 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Rocket, Star } from 'lucide-react';
+import { Menu, X, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from "@/components/ui/navigation-menu"
-import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: 'Mission Control', path: '/' },
@@ -60,52 +53,44 @@ const Navbar: React.FC = () => {
               </div>
               <div className="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-space-neon rounded-full animate-pulse-glow" />
             </div>
-            <div className="flex flex-col">
-              <span className="font-orbitron text-lg font-bold tracking-wider bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
-                iSPACE
-              </span>
-              <span className="text-[10px] text-gray-400 font-medium -mt-1">Young Scientist Initiative</span>
-            </div>
+            <span className="font-orbitron text-lg font-bold tracking-wider bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
+              iSPACE
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center">
-            <NavigationMenu className="mx-auto">
-              <NavigationMenuList className="space-x-1">
-                {navItems.map((item) => (
-                  <NavigationMenuItem key={item.path}>
-                    <Link 
-                      to={item.path}
-                      className={cn(
-                        "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-space-purple/20 hover:text-white focus:bg-space-purple/20 focus:text-white focus:outline-none",
-                        location.pathname === item.path 
-                          ? "bg-space-purple/30 text-white" 
-                          : "text-gray-300"
-                      )}
-                    >
-                      <span>{item.label}</span>
-                      {location.pathname === item.path && (
-                        <motion.div 
-                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-space-purple"
-                          layoutId="navbar-indicator"
-                        />
-                      )}
-                    </Link>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
+          <div className="hidden lg:flex items-center justify-center flex-1 px-4">
+            <ul className="flex space-x-6">
+              {navItems.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path}
+                    className={`relative py-2 px-1 font-medium text-sm transition-colors ${
+                      location.pathname === item.path 
+                        ? "text-white" 
+                        : "text-gray-300 hover:text-white"
+                    }`}
+                  >
+                    {item.label}
+                    {location.pathname === item.path && (
+                      <motion.div 
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-space-purple"
+                        layoutId="navbar-indicator"
+                      />
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact Button on Desktop */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button
               asChild
-              variant="ghost"
               className="space-button font-orbitron text-xs tracking-wider px-6 py-2 group"
             >
-              <Link to="/contact" className="flex items-center gap-2">
-                <Star className="w-3.5 h-3.5 text-space-neon group-hover:text-white transition-colors" />
+              <Link to="/contact">
                 <span>Connect</span>
               </Link>
             </Button>
@@ -115,7 +100,7 @@ const Navbar: React.FC = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-white hover:bg-space-purple/20"
+            className="lg:hidden text-white hover:bg-space-purple/20"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -131,7 +116,7 @@ const Navbar: React.FC = () => {
           x: isOpen ? 0 : '100%'
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 bg-space-blue/95 backdrop-blur-lg z-40 md:hidden"
+        className="fixed inset-0 bg-space-blue/95 backdrop-blur-lg z-40 lg:hidden"
       >
         <div className="flex flex-col items-center justify-center h-full gap-8 p-8">
           {navItems.map((item) => (
@@ -148,6 +133,13 @@ const Navbar: React.FC = () => {
               {item.label}
             </Link>
           ))}
+          <Link
+            to="/contact"
+            className="mt-4 px-6 py-2 bg-space-purple rounded-lg text-white font-orbitron"
+            onClick={() => setIsOpen(false)}
+          >
+            Connect
+          </Link>
         </div>
       </motion.div>
     </nav>

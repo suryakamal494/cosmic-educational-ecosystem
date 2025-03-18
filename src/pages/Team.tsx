@@ -12,16 +12,16 @@ const Team = () => {
   const suryaImage = "/lovable-uploads/5bc0243f-8a22-4a15-b822-217c965a0ec8.png";
   const yuvarajuImage = "/lovable-uploads/75d2629a-b1b1-474d-bdc5-d882d9980006.png";
   const jamesImage = "/lovable-uploads/d21584d8-0b9c-416d-88f9-c73f29c479d7.png";
-  const tanyaImage = "https://www.tanyaknudsen.com/assets/images/tanya-knudsen.jpg";
-  const elisabethImage = "https://media.licdn.com/dms/image/D5603AQGKlgR7Nl8Rmw/profile-displayphoto-shrink_800_800/0/1689188694398?e=2147483647&v=beta&t=tQaNJBTELECJrS_1ZlvPzn7hJnZgPXG-wPcwR0QVrGc";
-  const kenImage = "https://media.licdn.com/dms/image/C5603AQEgtNj9z0KJYQ/profile-displayphoto-shrink_800_800/0/1517604913125?e=2147483647&v=beta&t=qM8B_z4DGDgGw-_hx3YTUzIjBCk3aIOmIYwMmZ_i9eQ";
+  const josephImage = "/lovable-uploads/fe413829-aa20-4113-b6a8-43ce1275bad1.png";
+  const blairImage = "/lovable-uploads/ff0e7b26-46fc-4581-aca1-3eefc6859f99.png";
+  const kenImage = "/lovable-uploads/b4e68210-cea7-4557-95c0-4eccf97fb232.png";
 
   return (
     <div className="min-h-screen bg-space-blue text-white">
       <StarryBackground />
       <Navbar />
       
-      <main className="pt-24 pb-20 relative">
+      <main className="pt-32 pb-20 relative">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-space-purple/5 blur-[100px] rounded-full pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-space-neon/5 blur-[100px] rounded-full pointer-events-none"></div>
@@ -90,36 +90,36 @@ const Team = () => {
               </div>
               
               <div className="grid gap-10">
-                <TeamMember 
-                  name="Dr. James Maddirala"
-                  title="Global Academic Leader in Space Education"
-                  bio="A distinguished educator, researcher, and global academic leader with extensive experience in STEM education, international collaborations, and space science initiatives. As a Distinguished Speaker for iSPACE's Young Scientist Initiative, he brings valuable expertise in higher education, research-driven learning, and interdisciplinary problem-solving."
-                  profileLink="https://www.thealumniassociation.com/home/4839394-james-maddirala/profile"
-                  imageUrl={jamesImage}
-                />
-                
-                <div className="grid md:grid-cols-2 gap-10 mt-10">
+                <div className="grid md:grid-cols-2 gap-10">
                   <TeamMember 
-                    name="Tanya Knudsen"
-                    title="Expert in Creative Problem-Solving"
-                    bio="Tanya Knudsen is an expert in creative problem-solving, helping individuals and organizations unlock innovation through structured thinking techniques. With a passion for fostering creativity, she provides workshops, training, and coaching to develop critical thinking, idea generation, and strategic problem-solving skills."
-                    profileLink="https://www.tanyaknudsen.com/"
-                    imageUrl={tanyaImage}
+                    name="Dr. James Maddirala"
+                    title="Vice President Global Partnerships"
+                    bio="A distinguished educator, researcher, and global academic leader with extensive experience in STEM education, international collaborations, and space science initiatives. As a Distinguished Speaker for iSPACE's Young Scientist Initiative, he brings valuable expertise in higher education, research-driven learning, and interdisciplinary problem-solving."
+                    profileLink="https://www.thealumniassociation.com/home/4839394-james-maddirala/profile"
+                    imageUrl={jamesImage}
                   />
                   
                   <TeamMember 
-                    name="Elisabeth Morney, D.A."
-                    title="STEM Education & Innovation Leader"
-                    bio="An education and innovation leader specializing in STEM education, creative problem-solving, and global learning initiatives. With extensive experience in fostering interdisciplinary collaboration, she has played a key role in developing international educational programs and empowering students with future-ready skills."
-                    profileLink="https://www.linkedin.com/in/elisabeth-morney-d-a-bb633055/"
-                    imageUrl={elisabethImage}
+                    name="Dr. Joseph M. Stevenson"
+                    title="Chief Mentor, Curriculum Design"
+                    bio="Dr. Stevenson brings decades of experience in educational leadership and curriculum development with a focus on STEM fields. His innovative approaches to teaching space sciences have transformed how students engage with complex concepts, making them accessible and exciting for learners of all ages."
+                    profileLink="#"
+                    imageUrl={josephImage}
                   />
                 </div>
                 
-                <div className="mt-10">
+                <div className="grid md:grid-cols-2 gap-10 mt-10">
+                  <TeamMember 
+                    name="Dr. Blair Odo"
+                    title="Girl Education and Empowerment"
+                    bio="Dr. Odo specializes in creating inclusive STEM opportunities with a particular focus on empowering young women in science and space exploration. Her programs have helped countless girls discover their potential in traditionally male-dominated fields through mentorship, hands-on projects, and confidence-building initiatives."
+                    profileLink="#"
+                    imageUrl={blairImage}
+                  />
+                  
                   <TeamMember 
                     name="Dr. Ken Kempner"
-                    title="Higher Education & STEM Policy Expert"
+                    title="Advisor & Incharge for Inclusivity"
                     bio="An education strategist, researcher, and global advocate for academic excellence with a strong focus on STEM education, leadership, and faculty development. His research on higher education systems and diversity in academia aligns with iSPACE's mission to create inclusive and innovative learning experiences in space education."
                     profileLink="https://news.sou.edu/2020/05/sou-ken-kempner-studies-role-women-faculty-saudi-universities/"
                     imageUrl={kenImage}

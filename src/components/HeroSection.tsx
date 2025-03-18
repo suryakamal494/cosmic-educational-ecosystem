@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
@@ -17,8 +17,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   ctaText,
   ctaLink,
 }) => {
+  const stats = [
+    { value: "100+", label: "DIY Space Projects" },
+    { value: "12+", label: "Expert Talks" },
+    { value: "2", label: "International Trips" },
+    { value: "3+", label: "Specialized Courses" }
+  ];
+
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated celestial objects */}
       <div className="absolute w-32 h-32 rounded-full bg-space-purple/20 blur-2xl -top-10 -left-10 animate-float" style={{ animationDelay: '0s' }} />
       <div className="absolute w-40 h-40 rounded-full bg-space-neon/10 blur-3xl top-1/2 -right-20 animate-float" style={{ animationDelay: '2s' }} />
@@ -32,12 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       <div className="container mx-auto px-4 z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Star Icon */}
-          <div className="inline-flex mb-6">
-            <Star className="text-space-neon animate-star-twinkle w-8 h-8" />
-          </div>
-          
+        <div className="max-w-5xl mx-auto text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,10 +55,32 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto"
           >
             Cultivating India's next generation of space innovators through immersive education, hands-on experience, and global collaboration.
           </motion.p>
+          
+          {/* Stats Display */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
+          >
+            {stats.map((stat, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col items-center p-4 rounded-xl bg-space-blue-light/30 backdrop-blur-md border border-space-purple/20"
+              >
+                <span className="text-3xl md:text-4xl font-orbitron font-bold text-space-purple-light mb-1">
+                  {stat.value}
+                </span>
+                <span className="text-sm text-gray-300 text-center">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </motion.div>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
