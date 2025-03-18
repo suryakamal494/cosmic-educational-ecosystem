@@ -3,7 +3,7 @@ import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Linkedin, Star, Award, Users } from 'lucide-react';
+import { Award, Star, Users } from 'lucide-react';
 import TeamMember from '@/components/TeamMember';
 import { motion } from 'framer-motion';
 
@@ -16,53 +16,49 @@ const Team = () => {
   const elisabethImage = "https://media.licdn.com/dms/image/D5603AQGKlgR7Nl8Rmw/profile-displayphoto-shrink_800_800/0/1689188694398?e=2147483647&v=beta&t=tQaNJBTELECJrS_1ZlvPzn7hJnZgPXG-wPcwR0QVrGc";
   const kenImage = "https://media.licdn.com/dms/image/C5603AQEgtNj9z0KJYQ/profile-displayphoto-shrink_800_800/0/1517604913125?e=2147483647&v=beta&t=qM8B_z4DGDgGw-_hx3YTUzIjBCk3aIOmIYwMmZ_i9eQ";
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
-
   return (
     <div className="min-h-screen bg-space-blue text-white">
       <StarryBackground />
       <Navbar />
       
-      <main className="pt-24 pb-20">
-        <section className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+      <main className="pt-24 pb-20 relative">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-space-purple/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-space-neon/5 blur-[100px] rounded-full pointer-events-none"></div>
+        
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-block relative mb-4">
-                <Users className="text-space-purple w-8 h-8 animate-pulse-glow" />
-                <div className="absolute top-0 left-0 w-8 h-8 bg-space-purple/20 rounded-full blur-xl animate-pulse-glow" style={{ animationDelay: '0.5s' }}></div>
-              </div>
-              
-              <h1 className="font-orbitron mb-6 text-4xl md:text-5xl">
+              <h1 className="font-orbitron text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
                   Command Crew
                 </span>
               </h1>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Meet the visionaries, educators, and space enthusiasts behind iSPACE who are dedicated to inspiring the next generation of space pioneers.
+              <div className="h-1 w-32 bg-gradient-to-r from-space-purple to-space-neon/50 mx-auto mb-8"></div>
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto">
+                Meet the visionaries, educators, and space enthusiasts dedicated to inspiring the next generation of space pioneers.
               </p>
             </motion.div>
             
-            <motion.div 
-              className="bg-space-blue-light/5 backdrop-blur-sm border border-space-purple/10 rounded-2xl p-8 shadow-lg mb-16"
+            {/* Leadership Section */}
+            <motion.section 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+              transition={{ duration: 0.7 }}
+              className="mb-20"
             >
-              <div className="flex items-center justify-center gap-2 mb-8">
-                <Award className="text-space-purple h-6 w-6" />
-                <h2 className="text-2xl font-orbitron font-bold text-center">Leadership</h2>
+              <div className="flex items-center justify-center gap-4 mb-10">
+                <div className="h-[1px] w-16 bg-space-purple/50"></div>
+                <h2 className="text-3xl font-orbitron uppercase tracking-wider">Leadership</h2>
+                <div className="h-[1px] w-16 bg-space-purple/50"></div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-10">
                 <TeamMember 
                   name="Suryakamal B."
                   title="CEO"
@@ -79,36 +75,21 @@ const Team = () => {
                   imageUrl={yuvarajuImage}
                 />
               </div>
-            </motion.div>
+            </motion.section>
             
-            <motion.div 
-              className="bg-space-blue-light/5 backdrop-blur-sm border border-space-purple/10 rounded-2xl p-8 shadow-lg"
+            {/* Mentors & Advisors Section */}
+            <motion.section 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <div className="flex items-center justify-center gap-2 mb-8">
-                <Star className="text-space-purple h-6 w-6" />
-                <h2 className="text-2xl font-orbitron font-bold text-center">Mentors & Advisors</h2>
+              <div className="flex items-center justify-center gap-4 mb-10">
+                <div className="h-[1px] w-16 bg-space-purple/50"></div>
+                <h2 className="text-3xl font-orbitron uppercase tracking-wider">Mentors & Advisors</h2>
+                <div className="h-[1px] w-16 bg-space-purple/50"></div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8">
-                <TeamMember 
-                  name="Tanya Knudsen"
-                  title="Expert in Creative Problem-Solving"
-                  bio="Tanya Knudsen is an expert in creative problem-solving, helping individuals and organizations unlock innovation through structured thinking techniques. With a passion for fostering creativity, she provides workshops, training, and coaching to develop critical thinking, idea generation, and strategic problem-solving skills."
-                  profileLink="https://www.tanyaknudsen.com/"
-                  imageUrl={tanyaImage}
-                />
-                
-                <TeamMember 
-                  name="Elisabeth Morney, D.A."
-                  title="STEM Education & Innovation Leader"
-                  bio="An education and innovation leader specializing in STEM education, creative problem-solving, and global learning initiatives. With extensive experience in fostering interdisciplinary collaboration, she has played a key role in developing international educational programs and empowering students with future-ready skills."
-                  profileLink="https://www.linkedin.com/in/elisabeth-morney-d-a-bb633055/"
-                  imageUrl={elisabethImage}
-                />
-                
+              <div className="grid gap-10">
                 <TeamMember 
                   name="Dr. James Maddirala"
                   title="Global Academic Leader in Space Education"
@@ -117,17 +98,37 @@ const Team = () => {
                   imageUrl={jamesImage}
                 />
                 
-                <TeamMember 
-                  name="Dr. Ken Kempner"
-                  title="Higher Education & STEM Policy Expert"
-                  bio="An education strategist, researcher, and global advocate for academic excellence with a strong focus on STEM education, leadership, and faculty development. His research on higher education systems and diversity in academia aligns with iSPACE's mission to create inclusive and innovative learning experiences in space education."
-                  profileLink="https://news.sou.edu/2020/05/sou-ken-kempner-studies-role-women-faculty-saudi-universities/"
-                  imageUrl={kenImage}
-                />
+                <div className="grid md:grid-cols-2 gap-10 mt-10">
+                  <TeamMember 
+                    name="Tanya Knudsen"
+                    title="Expert in Creative Problem-Solving"
+                    bio="Tanya Knudsen is an expert in creative problem-solving, helping individuals and organizations unlock innovation through structured thinking techniques. With a passion for fostering creativity, she provides workshops, training, and coaching to develop critical thinking, idea generation, and strategic problem-solving skills."
+                    profileLink="https://www.tanyaknudsen.com/"
+                    imageUrl={tanyaImage}
+                  />
+                  
+                  <TeamMember 
+                    name="Elisabeth Morney, D.A."
+                    title="STEM Education & Innovation Leader"
+                    bio="An education and innovation leader specializing in STEM education, creative problem-solving, and global learning initiatives. With extensive experience in fostering interdisciplinary collaboration, she has played a key role in developing international educational programs and empowering students with future-ready skills."
+                    profileLink="https://www.linkedin.com/in/elisabeth-morney-d-a-bb633055/"
+                    imageUrl={elisabethImage}
+                  />
+                </div>
+                
+                <div className="mt-10">
+                  <TeamMember 
+                    name="Dr. Ken Kempner"
+                    title="Higher Education & STEM Policy Expert"
+                    bio="An education strategist, researcher, and global advocate for academic excellence with a strong focus on STEM education, leadership, and faculty development. His research on higher education systems and diversity in academia aligns with iSPACE's mission to create inclusive and innovative learning experiences in space education."
+                    profileLink="https://news.sou.edu/2020/05/sou-ken-kempner-studies-role-women-faculty-saudi-universities/"
+                    imageUrl={kenImage}
+                  />
+                </div>
               </div>
-            </motion.div>
+            </motion.section>
           </div>
-        </section>
+        </div>
       </main>
       
       <Footer />

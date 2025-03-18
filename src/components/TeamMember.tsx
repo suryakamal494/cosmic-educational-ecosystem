@@ -20,37 +20,53 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 }) => {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-      className="bg-space-blue-light/10 border border-space-purple/10 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="relative bg-gradient-to-br from-space-blue-light/30 to-space-blue/80 rounded-xl overflow-hidden shadow-xl group"
     >
-      <div className="p-6">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-          <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-2 border-space-purple/30 shadow-md">
+      {/* Decorative floating particle effects */}
+      <div className="absolute -top-10 -right-10 w-40 h-40 bg-space-purple/5 rounded-full blur-3xl z-0"></div>
+      <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-space-neon/5 rounded-full blur-3xl z-0"></div>
+      
+      <div className="p-6 relative z-10">
+        {/* Image container - large vertical format on left side */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+          <div className="relative min-w-[160px] h-[220px] overflow-hidden rounded-xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-space-purple/40 to-transparent opacity-70 z-10 transition-opacity duration-300 group-hover:opacity-50"></div>
             <img 
               src={imageUrl} 
               alt={name} 
-              className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" 
+              className="absolute inset-0 w-full h-full object-cover object-center" 
             />
+            {/* Glowing border effect on hover */}
+            <div className="absolute inset-0 border-2 border-transparent group-hover:border-space-purple/30 rounded-xl transition-all duration-300 z-20"></div>
           </div>
           
-          <div className="flex-1 text-center md:text-left">
-            <h3 className="font-orbitron text-lg md:text-xl text-white group-hover:text-space-purple-light transition-colors">{name}</h3>
-            <p className="text-space-purple-light text-sm mb-3 font-semibold">{title}</p>
-            <p className="text-gray-300 text-sm leading-relaxed mb-4">{bio}</p>
-            
-            {profileLink && (
-              <a 
-                href={profileLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-space-purple hover:text-space-purple-light transition-colors"
-              >
-                <Linkedin className="w-3.5 h-3.5" />
-                <span>View Profile</span>
-              </a>
-            )}
+          <div className="flex-1">
+            <div className="flex flex-col">
+              <h3 className="font-orbitron text-2xl text-white mb-1 group-hover:text-space-purple-light transition-colors">{name}</h3>
+              <p className="text-space-purple-light font-medium mb-4 inline-flex items-center">
+                <span className="w-5 h-[2px] bg-space-purple mr-2"></span>
+                {title}
+              </p>
+              
+              <div className="mt-2 prose prose-sm prose-invert max-w-none">
+                <p className="text-gray-300 leading-relaxed">{bio}</p>
+              </div>
+              
+              {profileLink && (
+                <a 
+                  href={profileLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-space-purple hover:text-space-purple-light transition-colors mt-4 group-hover:underline"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span>View LinkedIn Profile</span>
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>
