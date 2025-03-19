@@ -12,9 +12,9 @@ const Team = () => {
   const suryaImage = "/lovable-uploads/5bc0243f-8a22-4a15-b822-217c965a0ec8.png";
   const yuvarajuImage = "/lovable-uploads/75d2629a-b1b1-474d-bdc5-d882d9980006.png";
   const jamesImage = "/lovable-uploads/d21584d8-0b9c-416d-88f9-c73f29c479d7.png";
-  const josephImage = "/lovable-uploads/fe413829-aa20-4113-b6a8-43ce1275bad1.png";
-  const blairImage = "/lovable-uploads/ff0e7b26-46fc-4581-aca1-3eefc6859f99.png";
-  const kenImage = "/lovable-uploads/b4e68210-cea7-4557-95c0-4eccf97fb232.png";
+  const josephImage = "/lovable-uploads/c77a7e27-a377-44c4-b774-4b3722ade982.png";
+  const blairImage = "/lovable-uploads/9f6d891a-07cc-406a-964a-1e398d0a5290.png";
+  const kenImage = "/lovable-uploads/397eedea-3e25-4583-8bd2-c29f136d010e.png";
 
   return (
     <div className="min-h-screen bg-space-blue text-white">
@@ -23,8 +23,8 @@ const Team = () => {
       
       <main className="pt-32 pb-20 relative">
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-space-purple/5 blur-[100px] rounded-full pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-space-neon/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-80 bg-space-purple/5 blur-[150px] rounded-full pointer-events-none"></div>
+        <div className="absolute bottom-40 left-0 w-1/2 h-80 bg-space-neon/5 blur-[150px] rounded-full pointer-events-none"></div>
         
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
@@ -34,6 +34,13 @@ const Team = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+              <div className="flex justify-center mb-4">
+                <div className="relative">
+                  <Star className="h-12 w-12 text-space-purple animate-pulse" />
+                  <div className="absolute inset-0 bg-space-purple/30 blur-xl rounded-full animate-pulse-slow"></div>
+                </div>
+              </div>
+              
               <h1 className="font-orbitron text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
                   Command Crew
@@ -92,19 +99,19 @@ const Team = () => {
               <div className="grid gap-10">
                 <div className="grid md:grid-cols-2 gap-10">
                   <TeamMember 
-                    name="Dr. James Maddirala"
-                    title="Vice President Global Partnerships"
-                    bio="A distinguished educator, researcher, and global academic leader with extensive experience in STEM education, international collaborations, and space science initiatives. As a Distinguished Speaker for iSPACE's Young Scientist Initiative, he brings valuable expertise in higher education, research-driven learning, and interdisciplinary problem-solving."
-                    profileLink="https://www.thealumniassociation.com/home/4839394-james-maddirala/profile"
-                    imageUrl={jamesImage}
-                  />
-                  
-                  <TeamMember 
                     name="Dr. Joseph M. Stevenson"
                     title="Chief Mentor, Curriculum Design"
                     bio="Dr. Stevenson brings decades of experience in educational leadership and curriculum development with a focus on STEM fields. His innovative approaches to teaching space sciences have transformed how students engage with complex concepts, making them accessible and exciting for learners of all ages."
                     profileLink="#"
                     imageUrl={josephImage}
+                  />
+                  
+                  <TeamMember 
+                    name="Dr. James Maddirala"
+                    title="Vice President Global Partnerships"
+                    bio="A distinguished educator, researcher, and global academic leader with extensive experience in STEM education, international collaborations, and space science initiatives. As a Distinguished Speaker for iSPACE's Young Scientist Initiative, he brings valuable expertise in higher education, research-driven learning, and interdisciplinary problem-solving."
+                    profileLink="https://www.thealumniassociation.com/home/4839394-james-maddirala/profile"
+                    imageUrl={jamesImage}
                   />
                 </div>
                 

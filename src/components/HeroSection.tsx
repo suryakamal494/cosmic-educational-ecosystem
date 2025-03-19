@@ -60,26 +60,33 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             Cultivating India's next generation of space innovators through immersive education, hands-on experience, and global collaboration.
           </motion.p>
           
-          {/* Stats Display */}
+          {/* Stats Section - Prominent Display */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-12 relative"
           >
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="flex flex-col items-center p-4 rounded-xl bg-space-blue-light/30 backdrop-blur-md border border-space-purple/20"
-              >
-                <span className="text-3xl md:text-4xl font-orbitron font-bold text-space-purple-light mb-1">
-                  {stat.value}
-                </span>
-                <span className="text-sm text-gray-300 text-center">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
+            <div className="absolute inset-0 bg-space-purple/5 blur-xl rounded-2xl"></div>
+            
+            <div className="relative grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 bg-space-blue-light/20 backdrop-blur-md border border-space-purple/20 rounded-xl p-6 shadow-lg">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.1 * index + 0.4 }}
+                  className="flex flex-col items-center justify-center text-center bg-space-blue/50 border border-space-purple/30 rounded-lg p-4 hover:bg-space-blue/70 transition-all duration-300"
+                >
+                  <span className="text-3xl md:text-4xl font-orbitron font-bold text-white mb-1">
+                    {stat.value}
+                  </span>
+                  <span className="text-sm text-space-purple-light">
+                    {stat.label}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
           
           <motion.div 
