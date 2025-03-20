@@ -50,29 +50,37 @@ const ProgramsSection: React.FC = () => {
             {/* Decorative elements */}
             <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-space-purple/10 blur-xl"></div>
             
-            <div className="text-center mb-8">
-              <div className="inline-block">
-                <Telescope className="h-8 w-8 text-space-purple animate-pulse-glow" />
+            <div className="flex items-center lg:items-start flex-col lg:flex-row gap-8">
+              <div className="lg:w-1/3">
+                <img 
+                  src="/lovable-uploads/f5e1fc64-ed01-4b5f-9f79-6ab919656fa7.png" 
+                  alt="Orion Nebula"
+                  className="w-full h-auto rounded-xl shadow-lg border border-space-purple/20"
+                />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mt-2">
-                Grab the Cosmos with Our Telescopes!
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-space-purple to-space-neon mx-auto mt-4"></div>
-            </div>
-            
-            <p className="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
-              Ever dreamed of capturing galaxies, planets, and nebulae? With iSpace, you control real telescopes worldwide to snap cosmic wonders in real time. Ready to explore the universe?
-            </p>
-            
-            <div className="flex justify-center">
-              <Button
-                asChild
-                className="space-button group"
-              >
-                <Link to="/astronomy" className="flex items-center gap-2">
-                  Explore Now
-                </Link>
-              </Button>
+              
+              <div className="lg:w-2/3 text-center lg:text-left">
+                <div className="inline-block">
+                  <Telescope className="h-8 w-8 text-space-purple animate-pulse-glow" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold mt-2">
+                  Grab the Cosmos with Telescopes!
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-space-purple to-space-neon mx-auto lg:mx-0 mt-4"></div>
+                
+                <p className="text-gray-300 my-6">
+                  Ever dreamed of capturing galaxies, planets, and nebulae? With iSpace, you control real telescopes worldwide to snap cosmic wonders in real time. Ready to explore the universe?
+                </p>
+                
+                <Button
+                  asChild
+                  className="space-button group"
+                >
+                  <Link to="/astronomy" className="flex items-center gap-2">
+                    Explore Now
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </motion.div>

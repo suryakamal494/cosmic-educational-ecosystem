@@ -4,46 +4,19 @@ import { motion } from 'framer-motion';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Telescope, Star, Sun, Orbit } from 'lucide-react';
+import { Telescope, Star, Moon, Sun, Orbit, SparkleIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Astronomy = () => {
-  const cosmicItineraryItems = [
-    {
-      title: "Chase the Moon's Mystique",
-      description: "Watch its phases dance across the sky in stunning detail.",
-      icon: <Star className="w-6 h-6 text-space-neon" />,
-      image: "/lovable-uploads/d21584d8-0b9c-416d-88f9-c73f29c479d7.png"
-    },
-    {
-      title: "Decode the Sun's Fiery Riddles",
-      description: "Peer safely at our star with advanced solar filters.",
-      icon: <Sun className="w-6 h-6 text-space-neon" />,
-      image: "/lovable-uploads/b4e68210-cea7-4557-95c0-4eccf97fb232.png"
-    },
-    {
-      title: "Hunt Deep Space Treasures",
-      description: "Capture epic shots of the Andromeda Galaxy, Orion Nebula, and Crab Nebula.",
-      icon: <Orbit className="w-6 h-6 text-space-neon" />,
-      image: "/lovable-uploads/9f6d891a-07cc-406a-964a-1e398d0a5290.png"
-    },
-    {
-      title: "Command the Cosmos Live",
-      description: "Take the helm of professional telescopes remotely and seize the universe's marvels!",
-      icon: <Telescope className="w-6 h-6 text-space-neon" />,
-      image: "/lovable-uploads/fe413829-aa20-4113-b6a8-43ce1275bad1.png"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-space-blue text-white overflow-hidden">
       <StarryBackground />
       <Navbar />
       
-      <main className="pt-20 pb-20">
+      <main className="pt-24 pb-20">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24">
-          <div className="absolute inset-0 bg-[url('/lovable-uploads/75d2629a-b1b1-474d-bdc5-d882d9980006.png')] bg-cover bg-center opacity-20"></div>
+        <section className="relative py-16 md:py-20">
+          <div className="absolute inset-0 bg-[url('/lovable-uploads/f5e1fc64-ed01-4b5f-9f79-6ab919656fa7.png')] bg-cover bg-center opacity-10"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-space-blue/80 via-space-blue/60 to-space-blue"></div>
           
           <div className="container mx-auto px-4 relative z-10">
@@ -53,25 +26,35 @@ const Astronomy = () => {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 font-orbitron">
+              <div className="mb-8 inline-block">
+                <SparkleIcon className="h-12 w-12 text-space-neon animate-pulse-glow" />
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 font-orbitron leading-tight">
                 <span className="bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
                   Launch into the Cosmos with iSpace
                 </span>
               </h1>
-              <h2 className="text-xl md:text-3xl text-space-purple-light mb-10">
+              
+              <h2 className="text-xl md:text-3xl text-space-purple-light mb-8">
                 Your Galactic Adventure Awaits!
               </h2>
               
-              <div className="bg-space-blue-light/30 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-space-purple/20 shadow-xl">
+              <div className="bg-space-blue-light/30 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-space-purple/20 shadow-xl mb-10">
                 <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
                   For ages, humanity has gazed at the stars, sketching constellations, dreaming of far-off worlds, and pondering the universe's greatest enigmas. But what if you could leap beyond dreams and step into the cosmos yourself?
                 </p>
+                
                 <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
-                  What if the universe was yours to explore—live, in real time?
+                  <strong className="text-white">What if the universe was yours to explore—live, in real time?</strong>
                 </p>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  With iSpace, that's no longer a fantasy—it's your reality! Our Astronomy Course hands students the keys to elite telescopes worldwide, empowering them to observe, photograph, and unravel the secrets of the stars like true astronomers!
-                </p>
+                
+                <div className="relative inline-block mb-6">
+                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed relative z-10">
+                    With iSpace, that's no longer a fantasy—it's your reality! Our <strong className="text-white">Astronomy Course</strong> hands students the keys to elite telescopes worldwide, empowering them to observe, photograph, and unravel the secrets of the stars like true astronomers!
+                  </p>
+                  <div className="absolute -bottom-2 -left-2 -right-2 h-1 bg-gradient-to-r from-space-purple via-space-neon to-space-purple rounded-full"></div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -79,43 +62,55 @@ const Astronomy = () => {
         
         {/* Stargazing Portal Section */}
         <section className="py-16 relative">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            className="absolute top-0 right-0 w-96 h-96 bg-space-purple/10 rounded-full blur-[100px] -z-10"
+          />
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
+            className="absolute bottom-0 left-0 w-96 h-96 bg-space-neon/5 rounded-full blur-[100px] -z-10"
+          />
+          
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
               <div className="text-center mb-12">
+                <div className="inline-block">
+                  <Telescope className="h-12 w-12 text-space-neon mb-4" />
+                </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 font-orbitron">
                   Your Stargazing Portal Awaits!
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-space-purple to-space-neon mx-auto mb-6"></div>
                 <p className="text-xl text-gray-300">
-                  Dive into the universe with real-time access to cutting-edge telescopes armed with high-frame-rate video cameras. Here's what you'll master:
+                  Dive into the universe with <strong className="text-white">real-time access</strong> to cutting-edge telescopes armed with high-frame-rate video cameras. Here's what you'll master:
                 </p>
               </div>
               
-              <div className="bg-space-blue-light/20 backdrop-blur-md rounded-xl p-6 border border-space-purple/30 shadow-lg">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="flex-shrink-0 bg-space-purple/20 p-2 rounded-full">
-                    <Star className="w-6 h-6 text-space-neon" />
+              <div className="bg-space-blue-light/20 backdrop-blur-md rounded-xl p-8 border border-space-purple/30 shadow-lg">
+                <div className="flex items-center gap-4 mb-0">
+                  <div className="flex-shrink-0 bg-space-purple/20 p-3 rounded-full">
+                    <Star className="w-7 h-7 text-space-neon" />
                   </div>
-                  <p className="text-lg text-white">
-                    Snap jaw-dropping shots of planets, nebulae, and galaxies—yours to keep and study!
+                  <p className="text-lg text-white font-medium">
+                    Snap <span className="text-space-purple-light">jaw-dropping shots</span> of planets, nebulae, and galaxies—yours to keep and study!
                   </p>
                 </div>
                 
-                <div className="aspect-video overflow-hidden rounded-lg border border-space-purple/30 mb-6">
-                  <img 
-                    src="/lovable-uploads/c77a7e27-a377-44c4-b774-4b3722ade982.png" 
-                    alt="Telescope" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <div className="h-1 w-full bg-gradient-to-r from-transparent via-space-purple/30 to-transparent my-8 rounded-full"></div>
                 
                 <div className="text-center">
-                  <Button className="space-button px-8">
+                  <Button className="space-button px-8 py-6 text-lg">
                     Begin Your Cosmic Journey
                   </Button>
                 </div>
@@ -134,52 +129,94 @@ const Astronomy = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-space-purple to-space-neon mx-auto mb-6"></div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-              {cosmicItineraryItems.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-space-blue-light/20 backdrop-blur-md rounded-xl overflow-hidden border border-space-purple/30 shadow-lg group hover:border-space-purple/60 transition-all duration-300"
-                >
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-space-blue-light/20 backdrop-blur-md rounded-xl overflow-hidden border border-space-purple/30 shadow-lg p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-space-purple/20 p-2 rounded-full">
+                    <Moon className="w-6 h-6 text-space-neon" />
                   </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="bg-space-purple/20 p-2 rounded-full">
-                        {item.icon}
-                      </div>
-                      <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                    </div>
-                    
-                    <p className="text-gray-300">
-                      {item.description}
-                    </p>
+                  <h3 className="text-xl font-bold text-white">Chase the Moon's Mystique</h3>
+                </div>
+                
+                <p className="text-gray-300 pl-12">
+                  Watch its phases dance across the sky in <strong className="text-white">stunning detail</strong>.
+                </p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-space-blue-light/20 backdrop-blur-md rounded-xl overflow-hidden border border-space-purple/30 shadow-lg p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-space-purple/20 p-2 rounded-full">
+                    <Sun className="w-6 h-6 text-space-neon" />
                   </div>
-                </motion.div>
-              ))}
+                  <h3 className="text-xl font-bold text-white">Decode the Sun's Fiery Riddles</h3>
+                </div>
+                
+                <p className="text-gray-300 pl-12">
+                  Peer safely at our star with <strong className="text-white">advanced solar filters</strong>.
+                </p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-space-blue-light/20 backdrop-blur-md rounded-xl overflow-hidden border border-space-purple/30 shadow-lg p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-space-purple/20 p-2 rounded-full">
+                    <Orbit className="w-6 h-6 text-space-neon" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Hunt Deep Space Treasures</h3>
+                </div>
+                
+                <p className="text-gray-300 pl-12">
+                  Capture epic shots of the <strong className="text-white">Andromeda Galaxy, Orion Nebula, and Crab Nebula</strong>.
+                </p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-space-blue-light/20 backdrop-blur-md rounded-xl overflow-hidden border border-space-purple/30 shadow-lg p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-space-purple/20 p-2 rounded-full">
+                    <Telescope className="w-6 h-6 text-space-neon" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Command the Cosmos Live</h3>
+                </div>
+                
+                <p className="text-gray-300 pl-12">
+                  Take the helm of professional telescopes remotely and <strong className="text-white">seize the universe's marvels</strong>!
+                </p>
+              </motion.div>
             </div>
           </div>
-          
-          {/* Background decorative elements */}
-          <div className="absolute top-1/4 right-0 w-64 h-64 bg-space-purple/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/3 left-0 w-64 h-64 bg-space-neon/5 rounded-full blur-3xl" />
         </section>
         
         {/* Call to Action Section */}
         <section className="py-16 relative">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="max-w-4xl mx-auto text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-orbitron">
@@ -194,7 +231,7 @@ const Astronomy = () => {
                 <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-space-neon/10 rounded-full blur-3xl"></div>
                 
                 <p className="text-lg text-gray-300 mb-8 relative z-10 leading-relaxed">
-                  Forget textbooks and static images—with iSpace, you're not just learning about space; you're living it. Students transform into cosmic trail blazers, collecting authentic astronomical data and embarking on thrilling, hands-on voyages through the heavens!
+                  Forget textbooks and static images—with iSpace, you're <strong className="text-white">not just learning about space; you're living it</strong>. Students transform into cosmic trail blazers, collecting authentic astronomical data and embarking on thrilling, hands-on voyages through the heavens!
                 </p>
                 
                 <Button className="space-button px-8 py-6 text-lg relative z-10">

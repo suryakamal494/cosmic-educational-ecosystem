@@ -7,12 +7,13 @@ import { motion } from 'framer-motion';
 
 const navItems = [
   { label: 'Mission Control', path: '/' },
-  { label: 'Stellar Origins', path: '/about' },
-  { label: 'Interstellar Academies', path: '/programs' },
+  { label: 'About', path: '/about' },
+  { label: 'Courses', path: '/programs' },
   { label: 'Cosmic Expeditions', path: '/expeditions' },
-  { label: 'Astro-Tech Labs', path: '/labs' },
+  { label: 'Services', path: '/labs' },
   { label: 'Command Crew', path: '/team' },
   { label: 'Launchpad', path: '/contact' },
+  { label: 'Astronomy', path: '/astronomy' },
 ];
 
 const Navbar: React.FC = () => {
@@ -84,14 +85,14 @@ const Navbar: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact Button on Desktop */}
+          {/* Link to Launchpad instead of Contact button */}
           <div className="hidden lg:block">
             <Button
               asChild
               className="space-button font-orbitron text-xs tracking-wider px-6 py-2 group"
             >
               <Link to="/contact">
-                <span>Connect</span>
+                <span>Launchpad</span>
               </Link>
             </Button>
           </div>
@@ -138,7 +139,7 @@ const Navbar: React.FC = () => {
             className="mt-4 px-6 py-2 bg-space-purple rounded-lg text-white font-orbitron"
             onClick={() => setIsOpen(false)}
           >
-            Connect
+            Launchpad
           </Link>
         </div>
       </motion.div>
