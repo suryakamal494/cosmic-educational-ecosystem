@@ -39,17 +39,19 @@ const GlobalExposure = () => {
               <div className="w-24 h-1 bg-space-purple mx-auto mb-6"></div>
               <h2 className="text-xl md:text-2xl text-space-purple-light mb-6">Launching Futures Beyond Borders</h2>
               
-              <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                In a world without boundaries, <strong>global exposure</strong> is the key to unlocking a student's potential. 
-                At <strong>iSpace</strong>, we're redefining space education by connecting students to the 
-                <strong> international space community</strong> through hands-on, real-world experiences.
-              </p>
-              
-              <p className="text-gray-300 max-w-3xl mx-auto mt-4 leading-relaxed">
-                Our <strong>Global Exposure Program</strong> offers students unparalleled access to
-                <strong> international space agencies, top universities, global workshops, and prestigious competitions</strong>,
-                equipping them with the skills, networks, and vision to thrive in the ever-evolving space industry.
-              </p>
+              <div className="bg-space-blue-light/60 backdrop-blur-sm rounded-xl p-6 border border-space-purple/30 shadow-lg">
+                <p className="text-gray-100 max-w-3xl mx-auto leading-relaxed font-medium">
+                  In a world without boundaries, <strong className="text-white">global exposure</strong> is the key to unlocking a student's potential. 
+                  At <strong className="text-white">iSpace</strong>, we're redefining space education by connecting students to the 
+                  <strong className="text-white"> international space community</strong> through hands-on, real-world experiences.
+                </p>
+                
+                <p className="text-gray-100 max-w-3xl mx-auto mt-4 leading-relaxed font-medium">
+                  Our <strong className="text-white">Global Exposure Program</strong> offers students unparalleled access to
+                  <strong className="text-white"> international space agencies, top universities, global workshops, and prestigious competitions</strong>,
+                  equipping them with the skills, networks, and vision to thrive in the ever-evolving space industry.
+                </p>
+              </div>
             </motion.div>
             
             <motion.div 
@@ -63,7 +65,7 @@ const GlobalExposure = () => {
               </h2>
               
               <Tabs defaultValue="agencies" className="w-full">
-                <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-space-blue-light/50 p-2 mb-8">
+                <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-space-blue-light/70 p-2 mb-8 border border-space-purple/20">
                   <TabsTrigger value="agencies" className="data-[state=active]:bg-space-purple data-[state=active]:text-white">
                     <Plane className="w-4 h-4 mr-2" />
                     <span className="hidden md:inline">Space Agencies</span>
@@ -86,7 +88,7 @@ const GlobalExposure = () => {
                   </TabsTrigger>
                 </TabsList>
                 
-                <div className="mt-2 space-card p-6 md:p-8">
+                <div className="mt-2 space-card p-6 md:p-8 bg-space-blue-light/40 backdrop-blur-md border border-space-purple/30 rounded-xl shadow-lg">
                   <TabsContent value="agencies" className="mt-0">
                     <div className="flex flex-col md:flex-row gap-6 items-center">
                       <div className="md:w-1/3 flex justify-center">
@@ -219,7 +221,7 @@ const GlobalExposure = () => {
             </motion.div>
             
             <motion.div 
-              className="space-card text-center py-10 px-6"
+              className="space-card text-center py-10 px-6 bg-space-blue-light/50 backdrop-blur-md border border-space-purple/30 rounded-xl shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -228,14 +230,13 @@ const GlobalExposure = () => {
               <h3 className="text-2xl font-orbitron mb-4">
                 🚀 Join the Global Space Revolution with iSpace!
               </h3>
-              <p className="text-gray-300 max-w-3xl mx-auto mb-6">
+              <p className="text-gray-200 max-w-3xl mx-auto mb-6 font-medium">
                 At iSpace, we don't just teach space—we immerse students in the <strong>international space community</strong>. 
                 From touring <strong>iconic space agencies</strong> and mastering pre-university programs to forging 
                 <strong> global collaborations</strong> and competing on the world stage, our <strong>Global Exposure Program</strong> 
                 prepares students to become the <strong>scientists, innovators, and leaders</strong> of tomorrow.
               </p>
               
-              {/* Changed to Link component to redirect to Contact page */}
               <Link to="/contact">
                 <Button className="space-button font-orbitron text-sm tracking-wider group">
                   Contact Us <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />

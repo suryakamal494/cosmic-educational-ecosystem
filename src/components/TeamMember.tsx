@@ -24,20 +24,18 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="group"
+      whileHover={{ y: -5 }}
     >
-      <div className="relative overflow-hidden rounded-xl shadow-2xl">
-        {/* Card background with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-space-blue-light/20 to-space-blue/90 z-0"></div>
-        
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-space-blue-light/40 to-space-blue/95 border border-space-purple/20 shadow-xl hover:border-space-purple/40 transition-all duration-300">
         {/* Decorative elements */}
-        <div className="absolute -right-10 -top-10 w-40 h-40 bg-space-purple/10 blur-3xl rounded-full"></div>
-        <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-space-neon/10 blur-3xl rounded-full"></div>
+        <div className="absolute -right-20 -top-20 w-40 h-40 bg-space-purple/10 blur-3xl rounded-full"></div>
+        <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-space-neon/10 blur-3xl rounded-full"></div>
         
-        <div className="relative z-10 p-8">
-          <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
+        <div className="relative z-10 p-6 md:p-8">
+          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             {/* Profile image */}
-            <div className="relative">
-              <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-space-purple/30 shadow-lg relative">
+            <div className="relative shrink-0">
+              <div className="w-36 h-36 md:w-40 md:h-40 rounded-lg overflow-hidden border-2 border-space-purple/30 shadow-lg relative">
                 <img 
                   src={imageUrl} 
                   alt={name} 
@@ -50,7 +48,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               
               {/* Decorative badge */}
               <div className="absolute -right-2 -bottom-2 bg-space-purple/80 rounded-full p-2 shadow-xl">
-                <Shield className="w-6 h-6 text-white" />
+                <Shield className="w-5 h-5 text-white" />
               </div>
               
               {/* Glow effect */}
@@ -58,17 +56,17 @@ const TeamMember: React.FC<TeamMemberProps> = ({
             </div>
             
             {/* Content */}
-            <div className="flex-1 lg:text-left text-center">
-              <div className="mb-4">
-                <h3 className="font-orbitron text-3xl text-white mb-2">{name}</h3>
-                <div className="flex items-center justify-center lg:justify-start gap-2 text-space-purple-light">
-                  <Award className="w-5 h-5" />
-                  <span className="font-medium">{title}</span>
+            <div className="flex-1">
+              <div className="mb-3">
+                <h3 className="font-orbitron text-2xl text-white mb-1">{name}</h3>
+                <div className="flex items-center text-space-purple-light">
+                  <Award className="w-4 h-4 mr-2" />
+                  <span className="font-medium text-sm">{title}</span>
                 </div>
               </div>
               
               <div className="bg-space-blue-light/20 backdrop-blur-sm rounded-lg p-4 border border-space-purple/20 mb-4">
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {bio}
                 </p>
               </div>
@@ -78,7 +76,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                   href={profileLink} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-space-purple/20 hover:bg-space-purple/30 px-4 py-2 rounded-full text-space-purple-light transition-colors"
+                  className="inline-flex items-center gap-2 bg-space-purple/20 hover:bg-space-purple/30 px-4 py-2 rounded-full text-space-purple-light transition-colors text-sm"
                 >
                   <Linkedin className="w-4 h-4" />
                   <span>Connect</span>
