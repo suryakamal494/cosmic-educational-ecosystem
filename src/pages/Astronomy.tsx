@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import { Telescope, Star, SparkleIcon, Orbit, RocketIcon, SunIcon, Earth, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const Astronomy = () => {
   const fadeIn = {
@@ -14,6 +15,11 @@ const Astronomy = () => {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.8 }
   };
+
+  // Fix scroll issue - scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const cosmicItinerary = [
     {
@@ -86,7 +92,7 @@ const Astronomy = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <span className="bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent drop-shadow-lg">
-                  Launch into the Cosmos
+                  Capture the Cosmos with Telescope
                 </span>
               </motion.h1>
               
@@ -345,9 +351,14 @@ const Astronomy = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                   >
-                    <Button className="space-button px-8 py-6 text-lg relative group overflow-hidden bg-gradient-to-r from-space-purple to-space-purple-dark hover:from-space-purple-dark hover:to-space-purple transition-all duration-300">
-                      <span className="relative z-10">Begin Your Space Journey Today</span>
-                      <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-space-neon/0 via-white/20 to-space-neon/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                    <Button 
+                      asChild
+                      className="space-button px-8 py-6 text-lg relative group overflow-hidden bg-gradient-to-r from-space-purple to-space-purple-dark hover:from-space-purple-dark hover:to-space-purple transition-all duration-300"
+                    >
+                      <Link to="/contact">
+                        <span className="relative z-10">Begin Your Space Journey Today</span>
+                        <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-space-neon/0 via-white/20 to-space-neon/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                      </Link>
                     </Button>
                   </motion.div>
                 </div>

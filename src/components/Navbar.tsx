@@ -83,14 +83,14 @@ const Navbar: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact button instead of Launchpad */}
+          {/* Changed "Contact" to "Contact Us" */}
           <div className="hidden lg:block">
             <Button
               asChild
               className="space-button font-orbitron text-xs tracking-wider px-6 py-2 group"
             >
               <Link to="/contact">
-                <span>Contact</span>
+                <span>Contact Us</span>
               </Link>
             </Button>
           </div>
@@ -137,7 +137,7 @@ const Navbar: React.FC = () => {
             className="mt-4 px-6 py-2 bg-space-purple rounded-lg text-white font-orbitron"
             onClick={() => setIsOpen(false)}
           >
-            Contact
+            Contact Us
           </Link>
         </div>
       </motion.div>

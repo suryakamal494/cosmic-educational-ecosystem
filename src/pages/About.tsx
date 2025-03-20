@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { Star, Rocket, Globe, Sparkles, Orbit, Award } from 'lucide-react';
-import AboutSection from '@/components/AboutSection';
 
 const About = () => {
   return (
@@ -25,7 +24,7 @@ const About = () => {
         <VisionSection />
         <JourneySection />
         <IndustrySection />
-        <AboutSection />
+        {/* AboutSection removed as requested */}
       </main>
       
       <Footer />
@@ -35,7 +34,7 @@ const About = () => {
 
 const VisionSection = () => {
   return (
-    <section className="mb-24">
+    <section className="mb-12">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +103,7 @@ const JourneySection = () => {
   };
   
   return (
-    <section className="mb-24 relative overflow-hidden">
+    <section className="mb-12 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div 
@@ -160,7 +159,7 @@ const IndustrySection = () => {
   ];
   
   return (
-    <section className="mb-24 relative">
+    <section className="mb-12 relative">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div 

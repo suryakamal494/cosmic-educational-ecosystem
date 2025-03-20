@@ -3,6 +3,7 @@ import React from 'react';
 import { Sparkles, Rocket, Star, Orbit, Brain, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+// This component is no longer used in the About page as requested
 const AboutSection: React.FC = () => {
   const features = [
     {
