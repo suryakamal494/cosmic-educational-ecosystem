@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Telescope, Star, SparkleIcon, Orbit, RocketIcon, SunIcon, PlanetIcon, GalaxyIcon } from 'lucide-react';
+import { Telescope, Star, SparkleIcon, Orbit, RocketIcon, SunIcon, Earth, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -36,13 +36,13 @@ const Astronomy = () => {
       image: "/lovable-uploads/1a410ea2-3bbd-4adb-a39e-fa2a9efc6066.png"
     },
     {
-      icon: <PlanetIcon className="h-6 w-6 text-space-purple-light" />,
+      icon: <Earth className="h-6 w-6 text-space-purple-light" />,
       title: "Journey to the Planets",
       description: "Explore their orbits, hues, and distinct traits across our cosmic neighborhood.",
       image: "/lovable-uploads/48581190-af29-431b-aaf3-6f1f3527eb20.png"
     },
     {
-      icon: <GalaxyIcon className="h-6 w-6 text-space-neon" />,
+      icon: <Star className="h-6 w-6 text-space-neon" />,
       title: "Journey into Deep Space",
       description: "Snap breathtaking views of the Andromeda Galaxy, Orion Nebula, and Crab Nebula.",
       image: "/lovable-uploads/ec873c63-d213-4e3c-bdf6-7e578123c1e4.png"
