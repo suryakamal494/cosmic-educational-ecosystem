@@ -8,35 +8,6 @@ const AboutSection: React.FC = () => {
     <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-space-gradient opacity-30" />
       
-      {/* Satellite orbiting animation */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-80 h-80">
-          <div className="absolute w-full h-full rounded-full border border-space-purple/20 opacity-50 animate-orbit" style={{ animationDuration: '30s' }}>
-            <motion.div 
-              className="absolute top-0 -left-4 w-8 h-8"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-            >
-              <div className="w-8 h-8 bg-space-purple/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <Rocket className="w-4 h-4 text-space-purple-light rotate-45" />
-              </div>
-            </motion.div>
-          </div>
-          
-          <div className="absolute w-full h-full rounded-full border border-space-neon/10 opacity-30 animate-orbit" style={{ animationDuration: '50s', animationDelay: '5s' }}>
-            <motion.div 
-              className="absolute -top-3 left-1/2 w-6 h-6"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-            >
-              <div className="w-6 h-6 bg-space-neon/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <Star className="w-3 h-3 text-space-neon" />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
