@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import PlanetAnimation from '@/components/PlanetAnimation';
 import Navbar from '@/components/Navbar';
@@ -9,8 +9,90 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { motion } from 'framer-motion';
+import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Basic validation
+      if (!formData.email || !formData.message) {
+        toast({
+          title: "Missing information",
+          description: "Please fill in all required fields.",
+          variant: "destructive"
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Email format validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        toast({
+          title: "Invalid email",
+          description: "Please enter a valid email address.",
+          variant: "destructive"
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Simple email sending simulation
+      // In a real application, this would connect to a backend API
+      console.log('Sending email to: suryakamal494@gmail.com');
+      console.log('Form data:', formData);
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Success notification
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+        variant: "default"
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-space-blue text-white">
       <StarryBackground />
@@ -121,14 +203,16 @@ const Contact = () => {
                 <div className="space-card">
                   <h2 className="text-xl font-orbitron mb-6">Launch Your Journey</h2>
                   
-                  <form className="space-y-4">
+                  <form className="space-y-4" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label htmlFor="firstName" className="text-sm text-gray-300">First Name</label>
                         <Input 
                           id="firstName" 
                           placeholder="John" 
-                          className="bg-space-blue-light/50 border-space-purple/20 text-white" 
+                          className="bg-space-blue-light/50 border-space-purple/20 text-white"
+                          value={formData.firstName}
+                          onChange={handleChange}
                         />
                       </div>
                       
@@ -137,18 +221,23 @@ const Contact = () => {
                         <Input 
                           id="lastName" 
                           placeholder="Doe" 
-                          className="bg-space-blue-light/50 border-space-purple/20 text-white" 
+                          className="bg-space-blue-light/50 border-space-purple/20 text-white"
+                          value={formData.lastName}
+                          onChange={handleChange} 
                         />
                       </div>
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm text-gray-300">Email</label>
+                      <label htmlFor="email" className="text-sm text-gray-300">Email*</label>
                       <Input 
                         id="email" 
                         type="email" 
                         placeholder="john.doe@example.com" 
-                        className="bg-space-blue-light/50 border-space-purple/20 text-white" 
+                        className="bg-space-blue-light/50 border-space-purple/20 text-white"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     
@@ -157,22 +246,40 @@ const Contact = () => {
                       <Input 
                         id="subject" 
                         placeholder="I'm interested in..." 
-                        className="bg-space-blue-light/50 border-space-purple/20 text-white" 
+                        className="bg-space-blue-light/50 border-space-purple/20 text-white"
+                        value={formData.subject}
+                        onChange={handleChange}
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm text-gray-300">Message</label>
+                      <label htmlFor="message" className="text-sm text-gray-300">Message*</label>
                       <Textarea 
                         id="message" 
                         placeholder="Tell us how we can help..." 
-                        className="bg-space-blue-light/50 border-space-purple/20 text-white min-h-[120px]" 
+                        className="bg-space-blue-light/50 border-space-purple/20 text-white min-h-[120px]"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     
                     <div className="pt-4">
-                      <Button className="w-full bg-space-purple hover:bg-space-purple-dark text-white">
-                        <Send className="w-4 h-4 mr-2" /> Send Message
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-space-purple hover:bg-space-purple-dark text-white"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <div className="w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin mr-2"></div>
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-4 h-4 mr-2" /> Send Message
+                          </>
+                        )}
                       </Button>
                     </div>
                   </form>

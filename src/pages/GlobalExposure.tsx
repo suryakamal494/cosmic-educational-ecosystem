@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Globe, Plane, GraduationCap, Users, Award, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const GlobalExposure = () => {
   const fadeIn = {
@@ -234,9 +235,12 @@ const GlobalExposure = () => {
                 prepares students to become the <strong>scientists, innovators, and leaders</strong> of tomorrow.
               </p>
               
-              <Button className="space-button font-orbitron text-sm tracking-wider group">
-                Contact Us <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              {/* Changed to Link component to redirect to Contact page */}
+              <Link to="/contact">
+                <Button className="space-button font-orbitron text-sm tracking-wider group">
+                  Contact Us <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>
