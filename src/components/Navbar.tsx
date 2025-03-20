@@ -9,7 +9,7 @@ const navItems = [
   { label: 'Mission Control', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Courses', path: '/programs' },
-  { label: 'Cosmic Expeditions', path: '/expeditions' },
+  { label: 'Global Exposure', path: '/global-exposure' },
   { label: 'Services', path: '/labs' },
   { label: 'Command Crew', path: '/team' },
 ];

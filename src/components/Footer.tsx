@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Mission Control</Link></li>
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
               <li><Link to="/programs" className="text-gray-400 hover:text-white transition-colors">Courses</Link></li>
-              <li><Link to="/expeditions" className="text-gray-400 hover:text-white transition-colors">Cosmic Expeditions</Link></li>
+              <li><Link to="/global-exposure" className="text-gray-400 hover:text-white transition-colors">Global Exposure</Link></li>
             </ul>
           </div>
           

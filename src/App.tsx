@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
 const Programs = lazy(() => import("./pages/Programs"));
-const Expeditions = lazy(() => import("./pages/Expeditions"));
+const GlobalExposure = lazy(() => import("./pages/GlobalExposure"));
 const Labs = lazy(() => import("./pages/Labs"));
 const Team = lazy(() => import("./pages/Team"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -47,7 +47,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/programs" element={<Programs />} />
-            <Route path="/expeditions" element={<Expeditions />} />
+            <Route path="/global-exposure" element={<GlobalExposure />} />
             <Route path="/labs" element={<Labs />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
