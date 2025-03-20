@@ -76,7 +76,7 @@ const Team = () => {
                 
                 <TeamMember 
                   name="Dr. Yuvaraju Chinnam, Ph.D."
-                  title="Co-Founder and Head of Strategy and Innovation"
+                  title="Head Innovation and Strategy"
                   bio="Dr. Yuvaraju Chinnam, Co-Founder and Head of Strategy and Innovation at iSpace, channels his passion for nurturing space enthusiasts into groundbreaking educational programs. With a PhD and decades of experience in teaching and student mentorship, he has shaped academic initiatives globally, including as a Visiting Scholar at PennState University and a steering committee member at IEEE TALE 2023 in New Zealand. His diverse expertise in education and innovation drives iSpace's mission to inspire and equip the next generation of space scientists. At iSpace, Dr. Chinnam crafts strategic visions that blend hands-on learning with cutting-edge space exploration."
                   profileLink="https://www.linkedin.com/in/dr-yuvaraju-chinnam-phd-bb228557/"
                   imageUrl={yuvarajuImage}
