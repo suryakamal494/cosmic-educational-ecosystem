@@ -12,8 +12,6 @@ const navItems = [
   { label: 'Cosmic Expeditions', path: '/expeditions' },
   { label: 'Services', path: '/labs' },
   { label: 'Command Crew', path: '/team' },
-  { label: 'Launchpad', path: '/contact' },
-  { label: 'Astronomy', path: '/astronomy' },
 ];
 
 const Navbar: React.FC = () => {
@@ -85,14 +83,14 @@ const Navbar: React.FC = () => {
             </ul>
           </div>
 
-          {/* Link to Launchpad instead of Contact button */}
+          {/* Contact button instead of Launchpad */}
           <div className="hidden lg:block">
             <Button
               asChild
               className="space-button font-orbitron text-xs tracking-wider px-6 py-2 group"
             >
               <Link to="/contact">
-                <span>Launchpad</span>
+                <span>Contact</span>
               </Link>
             </Button>
           </div>
@@ -139,7 +137,7 @@ const Navbar: React.FC = () => {
             className="mt-4 px-6 py-2 bg-space-purple rounded-lg text-white font-orbitron"
             onClick={() => setIsOpen(false)}
           >
-            Launchpad
+            Contact
           </Link>
         </div>
       </motion.div>

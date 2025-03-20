@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Rocket, Globe, Users, LightbulbIcon, Award, Telescope } from 'lucide-react';
+import { Rocket, Globe, Users, LightbulbIcon, Telescope } from 'lucide-react';
 import ProgramCard from './ProgramCard';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -37,7 +37,7 @@ const ProgramsSection: React.FC = () => {
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
-        {/* New Telescope Content */}
+        {/* Telescope Content */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

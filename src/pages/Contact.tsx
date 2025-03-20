@@ -31,9 +31,9 @@ const Contact = () => {
                 <div className="absolute top-0 left-0 w-8 h-8 bg-space-purple/20 rounded-full blur-xl animate-pulse-glow" style={{ animationDelay: '0.5s' }}></div>
               </div>
               
-              <h1 className="font-orbitron mb-4">
+              <h1 className="font-orbitron mb-4 text-4xl">
                 <span className="bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
-                  Launchpad
+                  Contact Us
                 </span>
               </h1>
               <p className="text-gray-300 max-w-3xl mx-auto">
@@ -66,8 +66,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="text-sm font-bold mb-1">Email Us</h3>
-                          <p className="text-gray-300 text-sm">hello@ispace-education.com</p>
-                          <p className="text-gray-300 text-sm">support@ispace-education.com</p>
+                          <p className="text-gray-300 text-sm">info@ispace.life</p>
                         </div>
                       </div>
                       
@@ -77,8 +76,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="text-sm font-bold mb-1">Call Us</h3>
-                          <p className="text-gray-300 text-sm">+91 1234 567 890</p>
-                          <p className="text-gray-300 text-sm">+91 9876 543 210</p>
+                          <p className="text-gray-300 text-sm">+91 9701891039</p>
                         </div>
                       </div>
                       
@@ -89,9 +87,8 @@ const Contact = () => {
                         <div>
                           <h3 className="text-sm font-bold mb-1">Visit Us</h3>
                           <p className="text-gray-300 text-sm">
-                            iSPACE Headquarters<br />
-                            123 Cosmos Avenue<br />
-                            Bangalore, Karnataka 560001
+                            L&T, Serene County, Telecom Nagar,<br />
+                            Gachibowli, Telangana 500032
                           </p>
                         </div>
                       </div>
@@ -182,35 +179,6 @@ const Contact = () => {
                 </div>
               </motion.div>
             </div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.6 }}
-              className="text-center"
-            >
-              <div className="inline-block mb-6">
-                <div className="w-16 h-16 rounded-full bg-space-purple/20 flex items-center justify-center relative">
-                  <Rocket className="text-space-purple w-8 h-8 animate-pulse-glow" />
-                  <div className="absolute inset-0 rounded-full border-2 border-space-purple/30 animate-pulse"></div>
-                </div>
-              </div>
-              
-              <h2 className="text-2xl font-orbitron mb-3">Join Our Space Community</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Stay updated with the latest in space education, upcoming events, and special programs by subscribing to our newsletter.
-              </p>
-              
-              <div className="max-w-md mx-auto flex gap-3">
-                <Input 
-                  placeholder="Enter your email" 
-                  className="bg-space-blue-light/50 border-space-purple/20 text-white" 
-                />
-                <Button className="bg-space-purple hover:bg-space-purple-dark text-white whitespace-nowrap">
-                  Subscribe
-                </Button>
-              </div>
-            </motion.div>
           </div>
         </section>
       </main>
