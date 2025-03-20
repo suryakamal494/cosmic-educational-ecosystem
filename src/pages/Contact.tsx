@@ -17,6 +17,7 @@ const Contact = () => {
     firstName: '',
     lastName: '',
     email: '',
+    mobile: '',
     subject: '',
     message: ''
   });
@@ -78,6 +79,7 @@ const Contact = () => {
         firstName: '',
         lastName: '',
         email: '',
+        mobile: '',
         subject: '',
         message: ''
       });
@@ -226,6 +228,18 @@ const Contact = () => {
                           onChange={handleChange} 
                         />
                       </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="mobile" className="text-sm text-gray-300">Mobile Number</label>
+                      <Input 
+                        id="mobile" 
+                        type="tel" 
+                        placeholder="+91 9876543210" 
+                        className="bg-space-blue-light/50 border-space-purple/20 text-white"
+                        value={formData.mobile}
+                        onChange={handleChange}
+                      />
                     </div>
                     
                     <div className="space-y-2">

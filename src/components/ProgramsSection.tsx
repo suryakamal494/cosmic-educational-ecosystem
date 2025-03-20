@@ -12,7 +12,7 @@ const ProgramsSection: React.FC = () => {
       title: 'International Space Programs 🌍',
       description: 'Connect with top foreign universities and global space agencies through our international collaborations.',
       icon: <Globe className="w-10 h-10" />,
-      linkUrl: '/expeditions',
+      linkUrl: '/global-exposure',
     },
     {
       title: 'DIY Space Projects 🛠️',
@@ -22,9 +22,9 @@ const ProgramsSection: React.FC = () => {
     },
     {
       title: 'Distinguished Speaker Series 🎤',
-      description: 'Learn from experts from NASA, ISRO and other space agencies through our speaker sessions.',
+      description: 'Regular visits from industry experts, space scientists, and aerospace innovators.',
       icon: <Users className="w-10 h-10" />,
-      linkUrl: '/labs',
+      linkUrl: '/activities',
     },
     {
       title: 'Hands-on Learning & Space Challenges 🔬',
@@ -64,7 +64,7 @@ const ProgramsSection: React.FC = () => {
                   <Telescope className="h-8 w-8 text-space-purple animate-pulse-glow" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold mt-2">
-                  Grab the Cosmos with Telescopes!
+                  Capture the Cosmos with Telescopes!
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-space-purple to-space-neon mx-auto lg:mx-0 mt-4"></div>
                 

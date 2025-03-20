@@ -10,7 +10,7 @@ const navItems = [
   { label: 'About', path: '/about' },
   { label: 'Courses', path: '/programs' },
   { label: 'Global Exposure', path: '/global-exposure' },
-  { label: 'Services', path: '/labs' },
+  { label: 'Activities', path: '/activities' },
   { label: 'Command Crew', path: '/team' },
 ];
 
