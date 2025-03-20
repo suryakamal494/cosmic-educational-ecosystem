@@ -16,6 +16,68 @@ const Programs = () => {
       <main className="pt-20">
         <section className="py-20 px-4">
           <div className="container mx-auto">
+            {/* New Personalized Education Section */}
+            <div className="max-w-4xl mx-auto mb-20 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-8">
+                Personalized Space Education for Every Learner
+              </h1>
+              
+              <div className="space-card p-8 relative overflow-hidden backdrop-blur-md">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-space-purple/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-space-neon/10 rounded-full blur-3xl"></div>
+                
+                <p className="text-lg text-gray-200 mb-8">
+                  At <span className="font-bold text-space-purple-light">iSpace</span>, we understand that every student and school is unique. That's why we deliver <span className="font-bold text-space-purple-light">customized space education programs</span>, meticulously tailored to meet specific learning needs and academic goals. Partnering with educators, we design dynamic courses and workshops that seamlessly integrate with school curricula, empowering students to explore the cosmos their way.
+                </p>
+                
+                <div className="mt-8">
+                  <h3 className="text-xl font-orbitron mb-6">What We Offer</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center">
+                        <Book className="text-space-purple w-5 h-5" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-white font-semibold">Flexible Program Options</p>
+                        <p className="text-gray-300 text-sm">From intensive one-month workshops to comprehensive year-long courses.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-space-neon/20 flex items-center justify-center">
+                        <Code className="text-space-neon w-5 h-5" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-white font-semibold">Tailored Curriculum</p>
+                        <p className="text-gray-300 text-sm">Crafted to align with school standards and student proficiency levels.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-space-purple-light/20 flex items-center justify-center">
+                        <Star className="text-space-purple-light w-5 h-5" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-white font-semibold">Immersive Learning</p>
+                        <p className="text-gray-300 text-sm">Hands-on projects, real-world applications, and interactive experiences.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-space-purple/20 flex items-center justify-center">
+                        <Users className="text-space-purple w-5 h-5" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-white font-semibold">Expert Instruction</p>
+                        <p className="text-gray-300 text-sm">Led by aerospace engineers, scientists, and seasoned STEM educators.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">
               Interstellar Academies
             </h1>
