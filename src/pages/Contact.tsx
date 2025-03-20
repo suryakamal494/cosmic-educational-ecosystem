@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import PlanetAnimation from '@/components/PlanetAnimation';
@@ -10,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { motion } from 'framer-motion';
 import { useToast } from "@/components/ui/use-toast";
+import { sendEmail } from '@/services/emailService';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -59,13 +59,8 @@ const Contact = () => {
         return;
       }
 
-      // Simple email sending simulation
-      // In a real application, this would connect to a backend API
-      console.log('Sending email to: suryakamal494@gmail.com');
-      console.log('Form data:', formData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Send email using EmailJS service
+      await sendEmail(formData);
       
       // Success notification
       toast({

@@ -7,13 +7,6 @@ import Footer from '@/components/Footer';
 import { Telescope, Star, SparkleIcon, Orbit, RocketIcon, SunIcon, Earth, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
 
 const Astronomy = () => {
   const fadeIn = {
@@ -150,7 +143,7 @@ const Astronomy = () => {
                 </div>
               </motion.div>
               
-              {/* Cosmic Itinerary Carousel */}
+              {/* Cosmic Itinerary */}
               <motion.div 
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -168,40 +161,43 @@ const Astronomy = () => {
                       <Star className="h-6 w-6 text-space-neon" />
                     </h3>
                     
-                    <Carousel className="w-full overflow-hidden">
-                      <CarouselContent>
-                        {cosmicItinerary.map((item, index) => (
-                          <CarouselItem key={index}>
-                            <div className="p-2">
-                              <Card className="bg-space-blue-light/40 border-space-purple/20 overflow-hidden">
-                                <div className="h-56 overflow-hidden">
-                                  <img 
-                                    src={item.image} 
-                                    alt={item.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                                  />
-                                </div>
-                                <CardContent className="p-6">
-                                  <div className="flex items-center gap-3 mb-3">
-                                    <div className="bg-space-blue p-2 rounded-full">
-                                      {item.icon}
-                                    </div>
-                                    <h4 className="font-orbitron text-xl font-bold text-white">
-                                      {item.title}
-                                    </h4>
-                                  </div>
-                                  <p className="text-gray-300">
-                                    {item.description}
-                                  </p>
-                                </CardContent>
-                              </Card>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {cosmicItinerary.map((item, index) => (
+                        <motion.div 
+                          key={index}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          whileHover={{ scale: 1.03 }}
+                          className="overflow-hidden"
+                        >
+                          <Card className="bg-space-blue-light/40 border-space-purple/20 overflow-hidden h-full flex flex-col group">
+                            <div className="h-48 overflow-hidden relative">
+                              <img 
+                                src={item.image} 
+                                alt={item.title}
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-space-blue-light/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-space-blue-light/70 border-space-purple/30 text-white hover:bg-space-purple/70" />
-                      <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-space-blue-light/70 border-space-purple/30 text-white hover:bg-space-purple/70" />
-                    </Carousel>
+                            <CardContent className="p-6 flex-grow">
+                              <div className="flex items-center gap-3 mb-3">
+                                <div className="bg-space-blue p-2 rounded-full">
+                                  {item.icon}
+                                </div>
+                                <h4 className="font-orbitron text-xl font-bold text-white">
+                                  {item.title}
+                                </h4>
+                              </div>
+                              <p className="text-gray-300">
+                                {item.description}
+                              </p>
+                            </CardContent>
+                          </Card>
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </motion.div>
