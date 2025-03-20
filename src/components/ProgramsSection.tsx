@@ -1,8 +1,10 @@
 
 import React from 'react';
-import { Rocket, Globe, Users, LightbulbIcon, Award, BookOpen, BrainCircuit, MapPin, Orbit, Star } from 'lucide-react';
+import { Rocket, Globe, Users, LightbulbIcon, Award, Telescope } from 'lucide-react';
 import ProgramCard from './ProgramCard';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const ProgramsSection: React.FC = () => {
   const programs = [
@@ -32,17 +34,10 @@ const ProgramsSection: React.FC = () => {
     },
   ];
 
-  const stats = [
-    { number: "100+", label: "DIY Space Projects", icon: <BookOpen className="h-6 w-6 text-space-neon" /> },
-    { number: "12+", label: "Expert Talks Per Year", icon: <Users className="h-6 w-6 text-space-neon" /> },
-    { number: "2", label: "Space Hackathons", icon: <BrainCircuit className="h-6 w-6 text-space-neon" /> },
-    { number: "2+", label: "International Trips", icon: <MapPin className="h-6 w-6 text-space-neon" /> },
-  ];
-
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
-        {/* Featured Stats Section */}
+        {/* New Telescope Content */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,38 +49,30 @@ const ProgramsSection: React.FC = () => {
           <div className="relative bg-space-blue-light/20 backdrop-blur-xl border border-space-purple/30 rounded-2xl p-8 md:p-10 shadow-xl overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-space-purple/10 blur-xl"></div>
-            <div className="absolute top-0 right-10 opacity-10">
-              <Orbit className="w-32 h-32 text-space-neon" />
-            </div>
             
             <div className="text-center mb-8">
               <div className="inline-block">
-                <Star className="h-8 w-8 text-space-purple animate-pulse-glow" />
+                <Telescope className="h-8 w-8 text-space-purple animate-pulse-glow" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mt-2">
-                What We Offer to Schools
+                Grab the Cosmos with Our Telescopes!
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-space-purple to-space-neon mx-auto mt-4"></div>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex flex-col items-center text-center bg-gradient-to-b from-space-blue-light/30 to-transparent border border-space-purple/30 rounded-xl p-6 hover:shadow-lg hover:border-space-purple/50 transition-all duration-300"
-                >
-                  <div className="bg-space-blue-light/50 p-3 rounded-full mb-4">
-                    {stat.icon}
-                  </div>
-                  <h3 className="text-4xl md:text-5xl font-orbitron font-bold bg-gradient-to-r from-space-purple-light via-white to-space-neon bg-clip-text text-transparent mb-2">
-                    {stat.number}
-                  </h3>
-                  <p className="text-sm text-gray-300">{stat.label}</p>
-                </motion.div>
-              ))}
+            <p className="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+              Ever dreamed of capturing galaxies, planets, and nebulae? With iSpace, you control real telescopes worldwide to snap cosmic wonders in real time. Ready to explore the universe?
+            </p>
+            
+            <div className="flex justify-center">
+              <Button
+                asChild
+                className="space-button group"
+              >
+                <Link to="/astronomy" className="flex items-center gap-2">
+                  Explore Now
+                </Link>
+              </Button>
             </div>
           </div>
         </motion.div>
