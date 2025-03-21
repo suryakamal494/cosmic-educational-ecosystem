@@ -22,7 +22,8 @@ export const sendEmail = async (params: EmailParams): Promise<any> => {
       reply_to: params.email,
       phone: params.mobile,
       subject: params.subject,
-      message: params.message
+      message: params.message,
+      to_email: 'suryakamal494@gmail.com'
     };
 
     const response = await emailjs.send(
@@ -48,4 +49,5 @@ export const sendEmail = async (params: EmailParams): Promise<any> => {
 //    - phone
 //    - subject
 //    - message
+//    - to_email (recipient will be suryakamal494@gmail.com)
 // 4. Replace the SERVICE_ID, TEMPLATE_ID, and USER_ID constants with your credentials

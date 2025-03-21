@@ -17,6 +17,19 @@ const Astronomy = lazy(() => import("./pages/Astronomy"));
 const Labs = lazy(() => import("./pages/Labs"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// Preload important pages after main content loads
+const preloadPages = () => {
+  // Start preloading important pages when idle
+  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+    // @ts-ignore
+    window.requestIdleCallback(() => {
+      import("./pages/Labs");
+      import("./pages/Contact");
+      import("./pages/Astronomy");
+    });
+  }
+};
+
 // ScrollToTop component to handle scroll restoration
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -47,25 +60,32 @@ const queryClient = new QueryClient({
   },
 });
 
-const AppRoutes = () => (
-  <>
-    <ScrollToTop />
-    <Suspense fallback={<LoadingFallback />}>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/programs" element={<Programs />} />
-        <Route path="/global-exposure" element={<GlobalExposure />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/astronomy" element={<Astronomy />} />
-        <Route path="/labs" element={<Labs />} />
-        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Suspense>
-  </>
-);
+const AppRoutes = () => {
+  // Preload important pages when the main app loads
+  useEffect(() => {
+    preloadPages();
+  }, []);
+
+  return (
+    <>
+      <ScrollToTop />
+      <Suspense fallback={<LoadingFallback />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/global-exposure" element={<GlobalExposure />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/astronomy" element={<Astronomy />} />
+          <Route path="/labs" element={<Labs />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>

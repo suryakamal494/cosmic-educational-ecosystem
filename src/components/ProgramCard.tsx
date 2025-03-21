@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ProgramCardProps {
   title: string;
@@ -30,13 +31,13 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
           {description}
         </p>
         
-        <a
-          href={linkUrl}
+        <Link
+          to={linkUrl}
           className="inline-flex items-center gap-2 text-space-purple hover:text-space-purple-light transition-colors font-semibold mt-auto"
         >
           Learn more
           <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </a>
+        </Link>
       </div>
     </div>
   );

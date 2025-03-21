@@ -18,19 +18,19 @@ const ProgramsSection: React.FC = () => {
       title: 'DIY Space Projects 🛠️',
       description: 'Build Mars rovers, drones, robotics and other hands-on space projects to apply theoretical knowledge.',
       icon: <Rocket className="w-10 h-10" />,
-      linkUrl: '/programs',
+      linkUrl: '/labs',
     },
     {
       title: 'Distinguished Speaker Series 🎤',
       description: 'Regular visits from industry experts, space scientists, and aerospace innovators.',
       icon: <Users className="w-10 h-10" />,
-      linkUrl: '/activities',
+      linkUrl: '/labs',
     },
     {
       title: 'Hands-on Learning & Space Challenges 🔬',
       description: 'Engage in immersive learning experiences and compete in space-themed challenges and hackathons.',
       icon: <LightbulbIcon className="w-10 h-10" />,
-      linkUrl: '/programs',
+      linkUrl: '/labs',
     },
   ];
 
@@ -56,6 +56,7 @@ const ProgramsSection: React.FC = () => {
                   src="/lovable-uploads/f5e1fc64-ed01-4b5f-9f79-6ab919656fa7.png" 
                   alt="Orion Nebula"
                   className="w-full h-auto rounded-xl shadow-lg border border-space-purple/20"
+                  loading="lazy"
                 />
               </div>
               
