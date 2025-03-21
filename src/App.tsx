@@ -11,7 +11,6 @@ const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
 const Programs = lazy(() => import("./pages/Programs"));
 const GlobalExposure = lazy(() => import("./pages/GlobalExposure"));
-const Activities = lazy(() => import("./pages/Activities"));
 const Team = lazy(() => import("./pages/Team"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Astronomy = lazy(() => import("./pages/Astronomy"));
@@ -57,7 +56,6 @@ const AppRoutes = () => (
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/global-exposure" element={<GlobalExposure />} />
-        <Route path="/activities" element={<Activities />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/astronomy" element={<Astronomy />} />

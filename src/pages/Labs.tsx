@@ -114,8 +114,7 @@ const Labs = () => {
                 <div className="h-1 w-32 bg-gradient-to-r from-space-purple to-space-neon/50 mx-auto mb-6"></div>
                 
                 <p className="text-xl text-gray-300 max-w-3xl">
-                  Comprehensive space education solutions designed exclusively for forward-thinking schools. 
-                  Transform your science curriculum with cutting-edge technology and immersive learning experiences.
+                  At <strong>iSpace</strong>, we offer <strong>cutting-edge space education programs</strong> tailored for forward-thinking schools. Our hands-on, tech-driven modules seamlessly integrate with existing curricula, transforming classrooms into launchpads for innovation. Schools can customize their learning experience by selecting from a wide range of <strong>immersive, future-ready activities</strong> designed to inspire the next generation of explorers. 🚀
                 </p>
               </motion.div>
               

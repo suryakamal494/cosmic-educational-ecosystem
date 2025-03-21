@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Rocket } from 'lucide-react';
@@ -10,7 +9,6 @@ const navItems = [
   { label: 'About', path: '/about' },
   { label: 'Courses', path: '/programs' },
   { label: 'Global Exposure', path: '/global-exposure' },
-  { label: 'Activities', path: '/activities' },
   { label: 'Astro-Tech Labs', path: '/labs' },
   { label: 'Command Crew', path: '/team' },
 ];
