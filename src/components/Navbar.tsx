@@ -11,6 +11,7 @@ const navItems = [
   { label: 'Courses', path: '/programs' },
   { label: 'Global Exposure', path: '/global-exposure' },
   { label: 'Activities', path: '/activities' },
+  { label: 'Astro-Tech Labs', path: '/labs' },
   { label: 'Command Crew', path: '/team' },
 ];
 
@@ -83,7 +84,7 @@ const Navbar: React.FC = () => {
             </ul>
           </div>
 
-          {/* Changed "Contact" to "Contact Us" */}
+          {/* Contact Button */}
           <div className="hidden lg:block">
             <Button
               asChild
