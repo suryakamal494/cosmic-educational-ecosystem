@@ -40,7 +40,7 @@ const NotFound = () => {
               className="flex items-center gap-2 px-6 py-3 bg-space-purple text-white font-medium rounded-lg hover:bg-space-purple-dark transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              Return to Mission Control
+              Return to Home
             </Link>
           </div>
         </div>

@@ -1,15 +1,17 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const navItems = [
-  { label: 'Mission Control', path: '/' },
+  { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Courses', path: '/programs' },
   { label: 'Global Exposure', path: '/global-exposure' },
-  { label: 'Astro-Tech Labs', path: '/labs' },
+  { label: 'Activities', path: '/labs' },
   { label: 'Command Crew', path: '/team' },
 ];
 
@@ -17,6 +19,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -115,8 +118,14 @@ const Navbar: React.FC = () => {
         }}
         transition={{ duration: 0.3 }}
         className="fixed inset-0 bg-space-blue/95 backdrop-blur-lg z-40 lg:hidden"
+        style={{ 
+          position: 'fixed',
+          top: 0,
+          height: '100vh',
+          overflowY: 'auto' 
+        }}
       >
-        <div className="flex flex-col items-center justify-center h-full gap-8 p-8">
+        <div className="flex flex-col items-center justify-center h-full gap-8 p-8 py-20">
           {navItems.map((item) => (
             <Link
               key={item.path}

@@ -9,6 +9,7 @@ import { Globe, Plane, GraduationCap, Users, Award, ArrowRight } from 'lucide-re
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const GlobalExposure = () => {
   const fadeIn = {
@@ -16,6 +17,8 @@ const GlobalExposure = () => {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.5 }
   };
+  
+  const isMobile = useIsMobile();
 
   return (
     <div className="min-h-screen bg-space-blue text-white">
@@ -65,7 +68,7 @@ const GlobalExposure = () => {
               </h2>
               
               <Tabs defaultValue="agencies" className="w-full">
-                <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-space-blue-light/70 p-2 mb-8 border border-space-purple/20">
+                <TabsList className={`grid ${isMobile ? 'grid-cols-2' : 'md:grid-cols-4'} gap-2 bg-space-blue-light/70 p-2 mb-8 border border-space-purple/20`}>
                   <TabsTrigger value="agencies" className="data-[state=active]:bg-space-purple data-[state=active]:text-white">
                     <Plane className="w-4 h-4 mr-2" />
                     <span className="hidden md:inline">Space Agencies</span>
