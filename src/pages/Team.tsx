@@ -70,7 +70,7 @@ const Team = () => {
                   name="Suryakamal B."
                   title="Founder & CEO"
                   bio="Suryakamal, Founder & CEO of iSpace, is an education pioneer passionate about redefining learning through hands-on, immersive experiences. Driven by the need to equip students for a future in STEM, technology, and space exploration, he launched iSpace to transcend conventional education and cultivate creativity, critical thinking, and problem-solving abilities. He understands the pivotal role space education plays in inspiring young minds, using practical exposure to astronomy, engineering, and space sciences to build curiosity, adaptability, and resilience—essential traits for thriving in a dynamic world. At iSpace, Suryakamal is dedicated to equipping students with the skills to innovate, discover, and spearhead the next wave of space trailblazers."
-                  profileLink="#"
+                  profileLink="https://www.linkedin.com/in/suryakamal-bourisetty-8937a6112/"
                   imageUrl={suryaImage}
                 />
                 

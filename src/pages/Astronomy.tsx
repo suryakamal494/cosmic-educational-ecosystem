@@ -346,10 +346,10 @@ const Astronomy = () => {
                   >
                     <Button 
                       asChild
-                      className="space-button px-8 py-6 text-lg relative group overflow-hidden bg-gradient-to-r from-space-purple to-space-purple-dark hover:from-space-purple-dark hover:to-space-purple transition-all duration-300 max-w-full"
+                      className="space-button px-6 py-5 text-base sm:px-8 sm:py-6 sm:text-lg relative group overflow-hidden bg-gradient-to-r from-space-purple to-space-purple-dark hover:from-space-purple-dark hover:to-space-purple transition-all duration-300 w-auto mx-auto"
                     >
                       <Link to="/contact">
-                        <span className="relative z-10 whitespace-nowrap">Begin Your Space Journey Today</span>
+                        <span className="relative z-10 whitespace-normal sm:whitespace-nowrap">Begin Your Space Journey Today</span>
                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-space-neon/0 via-white/20 to-space-neon/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
                       </Link>
                     </Button>
@@ -367,4 +367,3 @@ const Astronomy = () => {
 };
 
 export default Astronomy;
-

@@ -19,7 +19,7 @@ const Index = () => {
       <main>
         <HeroSection 
           title="Young Scientist Initiative"
-          subtitle="Cultivating India's next generation of space innovators through immersive education, hands-on experience, and global collaboration."
+          subtitle="Enrich Your School's Curriculum with Engaging Space & STEM Programs"
           ctaText="Explore Our Programs"
           ctaLink="/programs"
         />

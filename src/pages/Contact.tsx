@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import PlanetAnimation from '@/components/PlanetAnimation';
@@ -145,7 +146,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="text-sm font-bold mb-1">Email Us</h3>
-                          <p className="text-gray-300 text-sm">info@ispace.life</p>
+                          <p className="text-gray-300 text-sm">info@ispace.academy</p>
                         </div>
                       </div>
                       
