@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import StarryBackground from '@/components/StarryBackground';
@@ -16,7 +15,6 @@ const Astronomy = () => {
     transition: { duration: 0.8 }
   };
 
-  // Fix scroll issue - scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -54,7 +52,6 @@ const Astronomy = () => {
       <Navbar />
       
       <main className="pt-24 pb-16 relative">
-        {/* Hero Section with Parallax Effect */}
         <section className="relative py-12 overflow-hidden">
           <motion.div 
             initial={{ scale: 1.1, opacity: 0.3 }} 
@@ -108,7 +105,6 @@ const Astronomy = () => {
           </div>
         </section>
         
-        {/* Main Content Section */}
         <section className="py-16 relative">
           <motion.div
             initial={{ opacity: 0 }}
@@ -119,7 +115,6 @@ const Astronomy = () => {
           
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              {/* Introduction Column */}
               <motion.div 
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -149,7 +144,6 @@ const Astronomy = () => {
                 </div>
               </motion.div>
               
-              {/* Cosmic Itinerary */}
               <motion.div 
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -211,7 +205,6 @@ const Astronomy = () => {
           </div>
         </section>
         
-        {/* Features Section */}
         <section className="py-16 relative">
           <motion.div
             initial={{ opacity: 0 }}
@@ -289,7 +282,6 @@ const Astronomy = () => {
           </div>
         </section>
         
-        {/* Call to Action Section */}
         <section className="py-16 relative">
           <motion.div
             initial={{ opacity: 0 }}
@@ -350,13 +342,14 @@ const Astronomy = () => {
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
+                    className="w-full overflow-hidden px-4"
                   >
                     <Button 
                       asChild
-                      className="space-button px-8 py-6 text-lg relative group overflow-hidden bg-gradient-to-r from-space-purple to-space-purple-dark hover:from-space-purple-dark hover:to-space-purple transition-all duration-300"
+                      className="space-button px-8 py-6 text-lg relative group overflow-hidden bg-gradient-to-r from-space-purple to-space-purple-dark hover:from-space-purple-dark hover:to-space-purple transition-all duration-300 max-w-full"
                     >
                       <Link to="/contact">
-                        <span className="relative z-10">Begin Your Space Journey Today</span>
+                        <span className="relative z-10 whitespace-nowrap">Begin Your Space Journey Today</span>
                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-space-neon/0 via-white/20 to-space-neon/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
                       </Link>
                     </Button>
@@ -374,3 +367,4 @@ const Astronomy = () => {
 };
 
 export default Astronomy;
+

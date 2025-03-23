@@ -1,9 +1,8 @@
-
 import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Rocket, Microscope, Cpu, Globe, Zap, Star, Users, BrainCircuit, FlaskConical, Atom, Check, Award, CalendarClock, MapPin, School, BookOpen, Sparkles } from 'lucide-react';
+import { Rocket, Telescope, Cpu, Globe, Zap, Star, Users, BrainCircuit, FlaskConical, Atom, Check, Award, CalendarClock, MapPin, School, BookOpen, Sparkles } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -107,7 +106,7 @@ const Labs = () => {
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-orbitron mb-6">
                   <span className="bg-gradient-to-r from-white via-space-purple-light to-white bg-clip-text text-transparent">
-                    Astro-Tech Labs
+                    Activities
                   </span>
                 </h1>
                 
@@ -253,7 +252,7 @@ const Labs = () => {
                   <CardContent className="p-0">
                     <div className="h-40 bg-gradient-to-br from-space-purple/20 to-space-blue-light/5 relative">
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <Microscope className="w-16 h-16 text-space-purple-light opacity-70" />
+                        <Telescope className="w-16 h-16 text-space-purple-light opacity-70" />
                       </div>
                     </div>
                     <div className="p-6">

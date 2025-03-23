@@ -68,26 +68,38 @@ const GlobalExposure = () => {
               </h2>
               
               <Tabs defaultValue="agencies" className="w-full">
-                <TabsList className={`grid ${isMobile ? 'grid-cols-2' : 'md:grid-cols-4'} gap-2 bg-space-blue-light/70 p-2 mb-8 border border-space-purple/20`}>
+                <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-space-blue-light/70 p-2 mb-8 border border-space-purple/20">
                   <TabsTrigger value="agencies" className="data-[state=active]:bg-space-purple data-[state=active]:text-white">
                     <Plane className="w-4 h-4 mr-2" />
-                    <span className="hidden md:inline">Space Agencies</span>
-                    <span className="md:hidden">Agencies</span>
+                    {isMobile ? (
+                      <span>Space Agencies</span>
+                    ) : (
+                      <span>Space Agencies</span>
+                    )}
                   </TabsTrigger>
                   <TabsTrigger value="pre-university" className="data-[state=active]:bg-space-purple data-[state=active]:text-white">
                     <GraduationCap className="w-4 h-4 mr-2" />
-                    <span className="hidden md:inline">Pre-University</span>
-                    <span className="md:hidden">Education</span>
+                    {isMobile ? (
+                      <span>Pre-University</span>
+                    ) : (
+                      <span>Pre-University</span>
+                    )}
                   </TabsTrigger>
                   <TabsTrigger value="collaborations" className="data-[state=active]:bg-space-purple data-[state=active]:text-white">
                     <Users className="w-4 h-4 mr-2" />
-                    <span className="hidden md:inline">Collaborations</span>
-                    <span className="md:hidden">Teams</span>
+                    {isMobile ? (
+                      <span>Collaborations</span>
+                    ) : (
+                      <span>Collaborations</span>
+                    )}
                   </TabsTrigger>
                   <TabsTrigger value="workshops" className="data-[state=active]:bg-space-purple data-[state=active]:text-white">
                     <Award className="w-4 h-4 mr-2" />
-                    <span className="hidden md:inline">Workshops & Competitions</span>
-                    <span className="md:hidden">Events</span>
+                    {isMobile ? (
+                      <span>Workshops</span>
+                    ) : (
+                      <span>Workshops & Competitions</span>
+                    )}
                   </TabsTrigger>
                 </TabsList>
                 

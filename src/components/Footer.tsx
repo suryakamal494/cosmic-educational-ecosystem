@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1">
             <h3 className="font-orbitron text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Mission Control</Link></li>
+              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
               <li><Link to="/programs" className="text-gray-400 hover:text-white transition-colors">Courses</Link></li>
               <li><Link to="/global-exposure" className="text-gray-400 hover:text-white transition-colors">Global Exposure</Link></li>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1">
             <h3 className="font-orbitron text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="/labs" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/labs" className="text-gray-400 hover:text-white transition-colors">Activities</Link></li>
               <li><Link to="/team" className="text-gray-400 hover:text-white transition-colors">Command Crew</Link></li>
               <li><Link to="/astronomy" className="text-gray-400 hover:text-white transition-colors">Astronomy Course</Link></li>
               {/* Launchpad quicklink removed as requested */}
