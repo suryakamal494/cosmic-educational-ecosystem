@@ -26,6 +26,8 @@ const preloadPages = () => {
       import("./pages/Labs");
       import("./pages/Contact");
       import("./pages/Astronomy");
+      import("./pages/Programs");
+      
     });
   }
 };
