@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 interface HeroSectionProps {
   title: string;
@@ -95,7 +96,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex justify-center"
           >
-            <Button 
+            {/* <Button 
               asChild
               className="space-button group"
             >
@@ -103,7 +104,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 {ctaText}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
+            </Button> */}
+            <Button asChild className="space-button group">
+              <Link to={ctaLink} className="flex items-center gap-2">
+                {ctaText}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
+
+
+
+
           </motion.div>
         </div>
       </div>
