@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { RocketIcon } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const CallToAction: React.FC = () => {
   return (
@@ -25,14 +26,11 @@ const CallToAction: React.FC = () => {
           </p>
           
           <div className="inline-flex">
-            <a 
-              href="/contact" 
-              className="glow-effect"
-            >
+            <Link to="/contact" className="glow-effect">
               <span className="relative block px-6 py-3 bg-space-purple text-white font-orbitron font-medium rounded-lg z-10">
                 Contact Us Today
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

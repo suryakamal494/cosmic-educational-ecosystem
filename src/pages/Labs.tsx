@@ -6,6 +6,8 @@ import { Rocket, Telescope, Cpu, Globe, Zap, Star, Users, BrainCircuit, FlaskCon
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { Link } from "react-router-dom";
+
 
 const FeatureCard = ({ icon, title, description, className = "", delay = 0 }) => (
   <motion.div
@@ -307,13 +309,10 @@ const Labs = () => {
                   Contact us to discuss how we can customize our program for your institution.
                 </p>
                 
-                <a 
-                  href="/contact" 
-                  className="inline-flex items-center justify-center px-6 py-3 bg-space-purple hover:bg-space-purple-dark text-white font-medium rounded-lg transition-colors duration-300"
-                >
+                <Link to="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-space-purple hover:bg-space-purple-dark text-white font-medium rounded-lg transition-colors duration-300">
                   Schedule a Consultation
                   <Rocket className="ml-2 w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
