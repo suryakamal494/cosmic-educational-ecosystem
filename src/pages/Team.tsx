@@ -1,4 +1,3 @@
-
 import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
@@ -8,9 +7,14 @@ import TeamMember from '@/components/TeamMember';
 import { motion } from 'framer-motion';
 
 const Team = () => {
-  // Using the provided images
-  const suryaImage = "/lovable-uploads/5bc0243f-8a22-4a15-b822-217c965a0ec8.png";
-  const yuvarajuImage = "/lovable-uploads/75d2629a-b1b1-474d-bdc5-d882d9980006.png";
+  // Updated images - Using the newly uploaded images
+  const suryaImage = "/lovable-uploads/ada3e171-31ed-4e89-a9f1-0b6591012e63.png";
+  const yuvarajuImage = "/lovable-uploads/6a9546c8-156e-4dfb-9317-280b70838eb1.png";
+  
+  // Keep the USA flag for specific profiles
+  const usaFlagBadge = "/lovable-uploads/47170ccf-00a6-46d5-9674-048f42cfb0ba.png";
+  
+  // Keep original images for others
   const jamesImage = "/lovable-uploads/d21584d8-0b9c-416d-88f9-c73f29c479d7.png";
   const josephImage = "/lovable-uploads/c77a7e27-a377-44c4-b774-4b3722ade982.png";
   const blairImage = "/lovable-uploads/9f6d891a-07cc-406a-964a-1e398d0a5290.png";
@@ -104,6 +108,7 @@ const Team = () => {
                     bio="Dr. Joseph Martin Stevenson brings a wealth of expertise to iSpace, shaping its innovative curriculum with decades of leadership in higher education. Holding a PhD in Curriculum and Instructional Leadership from the University of Oregon, along with advanced training from Harvard, Stanford, and Yale, he is a renowned futurist and academic visionary. As a seasoned provost, professor, and founder of the Executive PhD Program, he has authored over 20 books and advised institutions worldwide on academic excellence. Currently a Distinguished Scholar at Bethune-Cookman and Wilberforce Universities, Dr. Stevenson leverages his extensive experience to design cutting-edge, student-centered space education programs at iSpace."
                     profileLink="#"
                     imageUrl={josephImage}
+                    badgeUrl={usaFlagBadge}
                   />
                   
                   <TeamMember 
@@ -112,6 +117,7 @@ const Team = () => {
                     bio="James Samuel Maddirala joins iSpace as a Mentor, bringing 50 years of expertise in educational administration and global program management to foster international partnerships. With a PhD in Educational Policy & Management from the University of Oregon, he has served as Vice Provost at the University of the Virgin Islands for the past three years, spearheading graduate programs and global education initiatives. His extensive experience includes developing Study Abroad programs and managing offshore campuses in India, Nepal, and Thailand. A multilingual leader fluent in English and three Indian languages, James is passionate about connecting institutions worldwide. At iSpace, he leverages his global network and strategic vision to enhance our international collaborations."
                     profileLink="https://www.thealumniassociation.com/home/4839394-james-maddirala/profile"
                     imageUrl={jamesImage}
+                    badgeUrl={usaFlagBadge}
                   />
                 </div>
                 
@@ -122,6 +128,7 @@ const Team = () => {
                     bio="Dr. Blair M.T. Odo, Mentor for Girls' Education & Women Empowerment at iSpace, is a distinguished leader in cross-cultural education and global leadership. With a Ph.D. in Educational Policy & Management from the University of Oregon, she was the first female president of JAIMS (Japan-America Institute of Management Science) and has over 25 years of experience in academic leadership. Her expertise in international education, leadership training, and women's empowerment makes her a vital force at iSpace, where she is committed to advancing STEM opportunities for young girls and fostering leadership among women in space education."
                     profileLink="#"
                     imageUrl={blairImage}
+                    badgeUrl={usaFlagBadge}
                   />
                   
                   <TeamMember 
@@ -130,6 +137,7 @@ const Team = () => {
                     bio="Dr. Ken Kempner, Advisor and Head of Inclusivity at iSpace, is a distinguished scholar with a Ph.D. in Educational Psychology from the University of Oregon. As a Professor Emeritus at Southern Oregon University, he has served as Dean of Social Sciences and has been a Fulbright Scholar in Brazil, a fellow in Mexico, and a Yamada Scholar in Japan. Dr. Kempner's research focuses on higher education's role in developing countries, particularly regarding equity and social justice for underrepresented groups. His recent work includes studying the role of women faculty in Saudi Arabian universities. At iSpace, Dr. Kempner will leverage his extensive experience to promote inclusivity and diversity within our programs, ensuring equitable access to space education for all students."
                     profileLink="https://news.sou.edu/2020/05/sou-ken-kempner-studies-role-women-faculty-saudi-universities/"
                     imageUrl={kenImage}
+                    badgeUrl={usaFlagBadge}
                   />
                 </div>
               </div>

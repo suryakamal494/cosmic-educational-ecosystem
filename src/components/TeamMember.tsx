@@ -2,6 +2,7 @@
 import React from 'react';
 import { Linkedin, Shield, Award, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
 
 interface TeamMemberProps {
   name: string;
@@ -9,6 +10,7 @@ interface TeamMemberProps {
   bio: string;
   profileLink: string;
   imageUrl: string;
+  badgeUrl?: string;
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({
@@ -16,7 +18,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   title,
   bio,
   profileLink,
-  imageUrl
+  imageUrl,
+  badgeUrl
 }) => {
   return (
     <motion.div 
@@ -46,10 +49,18 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-space-blue/80 to-transparent opacity-60"></div>
               </div>
               
-              {/* Decorative badge */}
-              <div className="absolute -right-2 -bottom-2 bg-space-purple/80 rounded-full p-2 shadow-xl">
-                <Shield className="w-5 h-5 text-white" />
-              </div>
+              {/* USA Flag Badge (if provided) */}
+              {badgeUrl ? (
+                <div className="absolute -right-2 -bottom-2 bg-space-purple/80 rounded-full p-1 shadow-xl">
+                  <Avatar className="h-8 w-8 ring-2 ring-white">
+                    <AvatarImage src={badgeUrl} alt="USA Flag" />
+                  </Avatar>
+                </div>
+              ) : (
+                <div className="absolute -right-2 -bottom-2 bg-space-purple/80 rounded-full p-2 shadow-xl">
+                  <Shield className="w-5 h-5 text-white" />
+                </div>
+              )}
               
               {/* Glow effect */}
               <div className="absolute -inset-1 bg-space-purple/0 group-hover:bg-space-purple/20 rounded-xl blur-md transition-all duration-500 opacity-0 group-hover:opacity-100"></div>

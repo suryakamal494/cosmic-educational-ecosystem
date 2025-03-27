@@ -22,7 +22,7 @@ const CallToAction: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join iSPACE in our mission to inspire and equip young learners with skills in space science, fostering India's next generation of space innovators.
+            Enrich Your School's Curriculum with Engaging Space & STEM Programs
           </p>
           
           <div className="inline-flex">
