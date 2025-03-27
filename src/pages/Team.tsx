@@ -8,14 +8,14 @@ import { motion } from 'framer-motion';
 
 const Team = () => {
   // Updated images - Using the newly uploaded images
-  const suryaImage = "/lovable-uploads/f748a22e-8773-4bec-8d73-9961263c267b.png";
-  const yuvarajuImage = "/lovable-uploads/d92c0347-7e57-43d2-a76c-4a8024b329ac.png";
+  const yuvarajuImage = "/lovable-uploads/c19eeb1b-0266-4464-8f65-35174d84746c.png";
+  const suryaImage = "/lovable-uploads/9064b016-2d31-4347-b027-279138549637.png";
   
   // Keep the USA flag for specific profiles
   const usaFlagBadge = "/lovable-uploads/47170ccf-00a6-46d5-9674-048f42cfb0ba.png";
   
-  // Adding Elisabeth Morney profile
-  const elisabethImage = "/lovable-uploads/96861cf5-afd5-41c1-ae41-16b9ba2d0d71.png";
+  // Adding Elisabeth Morney profile with updated image
+  const elisabethImage = "/lovable-uploads/f63838b0-edd5-4e12-85e0-76ddee8bf74e.png";
   const finlandFlagBadge = "/lovable-uploads/96861cf5-afd5-41c1-ae41-16b9ba2d0d71.png";
   
   // Keep original images for others
