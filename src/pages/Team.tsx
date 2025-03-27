@@ -8,11 +8,15 @@ import { motion } from 'framer-motion';
 
 const Team = () => {
   // Updated images - Using the newly uploaded images
-  const suryaImage = "/lovable-uploads/ada3e171-31ed-4e89-a9f1-0b6591012e63.png";
-  const yuvarajuImage = "/lovable-uploads/6a9546c8-156e-4dfb-9317-280b70838eb1.png";
+  const suryaImage = "/lovable-uploads/f748a22e-8773-4bec-8d73-9961263c267b.png";
+  const yuvarajuImage = "/lovable-uploads/d92c0347-7e57-43d2-a76c-4a8024b329ac.png";
   
   // Keep the USA flag for specific profiles
   const usaFlagBadge = "/lovable-uploads/47170ccf-00a6-46d5-9674-048f42cfb0ba.png";
+  
+  // Adding Elisabeth Morney profile
+  const elisabethImage = "/lovable-uploads/96861cf5-afd5-41c1-ae41-16b9ba2d0d71.png";
+  const finlandFlagBadge = "/lovable-uploads/96861cf5-afd5-41c1-ae41-16b9ba2d0d71.png";
   
   // Keep original images for others
   const jamesImage = "/lovable-uploads/d21584d8-0b9c-416d-88f9-c73f29c479d7.png";
@@ -138,6 +142,17 @@ const Team = () => {
                     profileLink="https://news.sou.edu/2020/05/sou-ken-kempner-studies-role-women-faculty-saudi-universities/"
                     imageUrl={kenImage}
                     badgeUrl={usaFlagBadge}
+                  />
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-10 mt-10">
+                  <TeamMember 
+                    name="Dr. Elisabeth Morney"
+                    title="Mentor of Creative Innovation"
+                    bio="Dr. Elisabeth Morney is a seasoned creative professional with over two decades of experience in media production and innovation, notably with the Finnish Broadcasting Company (YLE). Creativity, a cornerstone of her approach, drives her mission to push boundaries and inspire innovation. As a mentor at iSpace Curriculum, she leverages her extensive background in television production and practice-based research to cultivate a more imaginative and dynamic learning environment. Her work, including her doctoral research at Aalto University, exemplifies how creative processes can transform ideas into groundbreaking outcomes. Elisabeth brings this expertise to guide and empower the next generation of innovators."
+                    profileLink="#"
+                    imageUrl={elisabethImage}
+                    badgeUrl={finlandFlagBadge}
                   />
                 </div>
               </div>

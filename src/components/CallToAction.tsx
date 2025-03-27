@@ -32,6 +32,15 @@ const CallToAction: React.FC = () => {
               </span>
             </Link>
           </div>
+          
+          {/* Logo at the bottom */}
+          <div className="mt-20 flex justify-center">
+            <img 
+              src="/lovable-uploads/f748a22e-8773-4bec-8d73-9961263c267b.png" 
+              alt="iSpace Logo" 
+              className="max-w-[250px] mx-auto"
+            />
+          </div>
         </div>
       </div>
     </section>

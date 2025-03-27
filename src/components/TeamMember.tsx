@@ -49,12 +49,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-space-blue/80 to-transparent opacity-60"></div>
               </div>
               
-              {/* USA Flag Badge (if provided) */}
+              {/* Country Flag Badge (if provided) - Changed to square */}
               {badgeUrl ? (
-                <div className="absolute -right-2 -bottom-2 bg-space-purple/80 rounded-full p-1 shadow-xl">
-                  <Avatar className="h-8 w-8 ring-2 ring-white">
-                    <AvatarImage src={badgeUrl} alt="USA Flag" />
-                  </Avatar>
+                <div className="absolute -right-2 -bottom-2 bg-space-purple/80 rounded-md p-1 shadow-xl">
+                  <div className="h-8 w-8 overflow-hidden">
+                    <img src={badgeUrl} alt="Country Flag" className="h-full w-full object-cover" />
+                  </div>
                 </div>
               ) : (
                 <div className="absolute -right-2 -bottom-2 bg-space-purple/80 rounded-full p-2 shadow-xl">
