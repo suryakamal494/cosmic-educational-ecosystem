@@ -11,9 +11,9 @@ interface EmailParams {
 }
 
 // EmailJS configuration constants
-const SERVICE_ID = 'service_id'; // Replace with your EmailJS service ID
-const TEMPLATE_ID = 'template_id'; // Replace with your EmailJS template ID
-const USER_ID = 'user_id'; // Replace with your EmailJS user ID
+const SERVICE_ID = 'service_yse16h6'; // Replace with your EmailJS service ID
+const TEMPLATE_ID = 'template_7hjy0ud'; // Replace with your EmailJS template ID
+const USER_ID = 'EEZmzs3ggUgygw5EF'; // Replace with your EmailJS user ID
 
 export const sendEmail = async (params: EmailParams): Promise<any> => {
   try {
