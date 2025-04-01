@@ -46,7 +46,11 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  const handleDropdownToggle = (label: string) => {
+  const handleDropdownToggle = (label: string, e?: React.MouseEvent) => {
+    if (e) {
+      e.stopPropagation(); // Prevent bubbling
+    }
+    
     if (activeDropdown === label) {
       setActiveDropdown(null);
     } else {
@@ -61,14 +65,16 @@ const Navbar: React.FC = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = () => {
-      setActiveDropdown(null);
+      if (!isMobile) {
+        setActiveDropdown(null);
+      }
     };
 
     document.addEventListener('click', handleClickOutside);
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, []);
+  }, [isMobile]);
 
   // Check if current path is in a dropdown's children
   const isChildActive = (item: any) => {
@@ -107,13 +113,13 @@ const Navbar: React.FC = () => {
                   {item.dropdown ? (
                     <div>
                       <button
-                        onClick={() => handleDropdownToggle(item.label)}
+                        onClick={(e) => handleDropdownToggle(item.label, e)}
                         className={`flex items-center py-2 px-1 font-medium text-sm transition-colors ${
                           isChildActive(item) ? "text-white" : "text-gray-300 hover:text-white"
                         }`}
                       >
                         {item.label}
-                        <ChevronDown size={14} className="ml-1" />
+                        <ChevronDown size={14} className={`ml-1 transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                         {(isChildActive(item) || activeDropdown === item.label) && (
                           <motion.div
                             className="absolute bottom-0 left-0 right-0 h-0.5 bg-space-purple"
@@ -122,7 +128,7 @@ const Navbar: React.FC = () => {
                         )}
                       </button>
                       
-                      {/* Dropdown Menu */}
+                      {/* Desktop Dropdown Menu */}
                       {activeDropdown === item.label && (
                         <div className="absolute left-0 mt-1 py-2 w-40 bg-space-blue-dark border border-space-purple/20 rounded-lg shadow-xl z-50">
                           {item.children?.map((child) => (
@@ -204,13 +210,13 @@ const Navbar: React.FC = () => {
           overflowY: 'auto' 
         }}
       >
-        <div className="flex flex-col items-center justify-center h-full gap-8 p-8 py-20">
+        <div className="flex flex-col items-center justify-center h-full gap-6 p-8 py-20">
           {navItems.map((item) => (
             <div key={item.label} className="w-full">
               {item.dropdown ? (
                 <div className="w-full">
                   <button
-                    onClick={() => handleDropdownToggle(item.label)}
+                    onClick={(e) => handleDropdownToggle(item.label, e)}
                     className="w-full flex items-center justify-center text-lg font-orbitron mb-2"
                   >
                     {item.label}
@@ -219,12 +225,12 @@ const Navbar: React.FC = () => {
                   
                   {/* Mobile Dropdown */}
                   {activeDropdown === item.label && (
-                    <div className="flex flex-col items-center space-y-3 mt-3 mb-2">
+                    <div className="flex flex-col items-center space-y-3 mt-3 mb-2 bg-space-blue-light/30 py-3 px-4 rounded-lg">
                       {item.children?.map((child) => (
                         <Link
                           key={child.label}
                           to={child.path}
-                          className="text-sm font-medium text-gray-300 hover:text-space-purple-light"
+                          className="text-sm font-medium text-gray-300 hover:text-space-purple-light py-1"
                           onClick={() => {
                             setIsOpen(false);
                             closeDropdowns();
