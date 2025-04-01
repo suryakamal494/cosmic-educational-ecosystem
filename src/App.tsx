@@ -1,3 +1,4 @@
+
 import { Suspense, lazy, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -14,6 +15,8 @@ const Team = lazy(() => import("./pages/Team"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Astronomy = lazy(() => import("./pages/Astronomy"));
 const Labs = lazy(() => import("./pages/Labs"));
+const Maxme = lazy(() => import("./pages/Maxme"));
+const Taramandal = lazy(() => import("./pages/Taramandal"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Preload important pages after main content loads
@@ -78,6 +81,8 @@ const AppRoutes = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/astronomy" element={<Astronomy />} />
           <Route path="/labs" element={<Labs />} />
+          <Route path="/partnerships/maxme" element={<Maxme />} />
+          <Route path="/partnerships/taramandal" element={<Taramandal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
