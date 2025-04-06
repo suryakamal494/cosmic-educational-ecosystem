@@ -48,7 +48,8 @@ const Navbar: React.FC = () => {
 
   const handleDropdownToggle = (label: string, e?: React.MouseEvent) => {
     if (e) {
-      e.stopPropagation(); // Prevent bubbling
+      e.preventDefault();
+      e.stopPropagation();
     }
     
     if (activeDropdown === label) {
