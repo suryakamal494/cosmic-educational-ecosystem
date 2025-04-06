@@ -4,10 +4,8 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import StarryBackground from '@/components/StarryBackground';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Rocket, Shield, Award, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Rocket, Shield, Award } from 'lucide-react';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -39,9 +37,6 @@ const Taramandal = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
               Taramandal Partnership
             </h1>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              From Orbit to Earth: Bringing cutting-edge space technology and education to young minds
-            </p>
           </motion.div>
           
           {/* Partnership overview */}
@@ -115,27 +110,6 @@ const Taramandal = () => {
                   <p className="text-gray-400 text-sm">Featured in Forbes India's DGEMS Select-200 Entrepreneurs (2024)</p>
                 </div>
               </div>
-            </div>
-          </motion.div>
-          
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-space-blue-light/30 to-space-purple/20 p-8 rounded-xl backdrop-blur-sm border border-space-purple/30">
-              <h3 className="text-xl font-bold mb-4">Join Our Space Education Programs</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Experience the future of space education through our industry-led curricula developed in partnership with Taramandal.
-              </p>
-              <Button asChild className="space-button font-orbitron text-sm tracking-wider group">
-                <Link to="/programs" className="flex items-center">
-                  Explore Programs
-                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
             </div>
           </motion.div>
         </div>

@@ -7,7 +7,6 @@ import HeroSection from '@/components/HeroSection';
 import ProgramsSection from '@/components/ProgramsSection';
 import AboutSection from '@/components/AboutSection';
 import PartnershipsSection from '@/components/PartnershipsSection';
-import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -30,8 +29,6 @@ const Index = () => {
         <AboutSection />
         
         <PartnershipsSection />
-        
-        <CallToAction />
       </main>
       
       <Footer />
