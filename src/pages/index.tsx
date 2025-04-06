@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ProgramsSection from '@/components/ProgramsSection';
 import AboutSection from '@/components/AboutSection';
-import CallToAction from '@/components/CallToAction';
+import PartnershipsSection from '@/components/PartnershipsSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -28,7 +28,19 @@ const Index = () => {
         
         <AboutSection />
         
-        <CallToAction />
+        <PartnershipsSection />
+        
+        {/* Viksit Bharat Logo Section */}
+        <div className="container mx-auto px-4 py-10 text-center">
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-gray-400 mb-4 text-sm">Proud Supporter of</p>
+            <img 
+              src="/lovable-uploads/02fe0fb4-1656-43e8-b920-1bf886fc1ca5.png" 
+              alt="Viksit Bharat Logo" 
+              className="max-w-xs w-full mx-auto"
+            />
+          </div>
+        </div>
       </main>
       
       <Footer />
