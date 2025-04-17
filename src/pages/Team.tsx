@@ -1,3 +1,4 @@
+
 import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
@@ -77,19 +78,8 @@ const Team = () => {
               </div>
               
               <div className="grid gap-10">
-                {/* Dr. Iyyanki V. Murali Krishna's profile */}
+                {/* Reordered profiles: 1. Suryakamal, 2. Dr. Yuvaraju, 3. Dr. Iyyanki */}
                 <div className="grid md:grid-cols-1 gap-10">
-                  <TeamMember 
-                    name="Dr. Iyyanki V. Murali Krishna"
-                    title="President"
-                    bio="Dr. Iyyanki V. Murali Krishna is a globally renowned expert in space technology, environmental management, and data analytics. With over four decades of experience spanning academia, government, and international collaboration, he has pioneered research and innovation in fields such as remote sensing, climate change, AI for sustainable development, and spatial epidemiology. An alumnus of IIT Madras and IISc Bangalore, he has held esteemed roles including Director of R&D at JNTU-Hyd, Senior Scientist at ISRO, and Senior Advisor at UC Berkeley's Haas Institute. He has been instrumental in shaping national policies and projects on climate resilience, disaster management, and smart village development, while mentoring over 40 PhD scholars. As President of iSpace, he brings visionary leadership and a commitment to advancing space education, innovation, and accessibility across the globe."
-                    profileLink="#"
-                    imageUrl={iyyankiImage}
-                    extraInfo="M - Tech (IIT-Madras), Ph.D (IISc-Bangalore), FIE, FIS, FAPASc, FICDM, IEEE Life Member"
-                  />
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-10 mt-10">
                   <TeamMember 
                     name="Suryakamal B."
                     title="Founder & CEO"
@@ -97,13 +87,24 @@ const Team = () => {
                     profileLink="https://www.linkedin.com/in/suryakamal-bourisetty-8937a6112/"
                     imageUrl={suryaImage}
                   />
-                  
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-10 mt-10">
                   <TeamMember 
                     name="Dr. Yuvaraju Chinnam, Ph.D."
                     title="Chief Innovation Officer"
                     bio="Dr. Yuvaraju Chinnam, Co-Founder and Chief Innovation Officer at iSpace, channels his passion for nurturing space enthusiasts into groundbreaking educational programs. With a PhD and decades of experience in teaching and student mentorship, he has shaped academic initiatives globally, including as a Visiting Scholar at PennState University and a steering committee member at IEEE TALE 2023 in New Zealand. His diverse expertise in education and innovation drives iSpace's mission to inspire and equip the next generation of space scientists. At iSpace, Dr. Chinnam crafts strategic visions that blend hands-on learning with cutting-edge space exploration."
                     profileLink="https://www.linkedin.com/in/dr-yuvaraju-chinnam-phd-bb228557/"
                     imageUrl={yuvarajuImage}
+                  />
+                  
+                  <TeamMember 
+                    name="Dr. Iyyanki V. Murali Krishna"
+                    title="President"
+                    bio="Dr. Iyyanki V. Murali Krishna is a globally renowned expert in space technology, environmental management, and data analytics. With over four decades of experience spanning academia, government, and international collaboration, he has pioneered research and innovation in fields such as remote sensing, climate change, AI for sustainable development, and spatial epidemiology. An alumnus of IIT Madras and IISc Bangalore, he has held esteemed roles including Director of R&D at JNTU-Hyd, Senior Scientist at ISRO, and Senior Advisor at UC Berkeley's Haas Institute. He has been instrumental in shaping national policies and projects on climate resilience, disaster management, and smart village development, while mentoring over 40 PhD scholars. As President of iSpace, he brings visionary leadership and a commitment to advancing space education, innovation, and accessibility across the globe."
+                    profileLink="https://www.linkedin.com/in/iyyanki-v-muralikrishna/"
+                    imageUrl={iyyankiImage}
+                    extraInfo="M - Tech (IIT-Madras), Ph.D (IISc-Bangalore), FIE, FIS, FAPASc, FICDM, IEEE Life Member"
                   />
                 </div>
               </div>
