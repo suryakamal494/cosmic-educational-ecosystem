@@ -19,6 +19,9 @@ const Team = () => {
   const elisabethImage = "/lovable-uploads/f63838b0-edd5-4e12-85e0-76ddee8bf74e.png";
   const finlandFlagBadge = "/lovable-uploads/96861cf5-afd5-41c1-ae41-16b9ba2d0d71.png";
   
+  // Adding Dr. Iyyanki V. Murali Krishna's profile image
+  const iyyankiImage = "/lovable-uploads/c8760795-8b80-4ac1-884d-542ea2e1e5d5.png";
+  
   // Keep original images for others
   const jamesImage = "/lovable-uploads/d21584d8-0b9c-416d-88f9-c73f29c479d7.png";
   const josephImage = "/lovable-uploads/c77a7e27-a377-44c4-b774-4b3722ade982.png";
@@ -74,22 +77,36 @@ const Team = () => {
                 <div className="h-[1px] w-16 bg-space-purple/50"></div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-10">
-                <TeamMember 
-                  name="Suryakamal B."
-                  title="Founder & CEO"
-                  bio="Suryakamal, Founder & CEO of iSpace, is an education pioneer passionate about redefining learning through hands-on, immersive experiences. Driven by the need to equip students for a future in STEM, technology, and space exploration, he launched iSpace to transcend conventional education and cultivate creativity, critical thinking, and problem-solving abilities. He understands the pivotal role space education plays in inspiring young minds, using practical exposure to astronomy, engineering, and space sciences to build curiosity, adaptability, and resilience—essential traits for thriving in a dynamic world. At iSpace, Suryakamal is dedicated to equipping students with the skills to innovate, discover, and spearhead the next wave of space trailblazers."
-                  profileLink="https://www.linkedin.com/in/suryakamal-bourisetty-8937a6112/"
-                  imageUrl={suryaImage}
-                />
+              <div className="grid gap-10">
+                {/* Reordered profiles: 1. Suryakamal, 2. Dr. Yuvaraju, 3. Dr. Iyyanki */}
+                <div className="grid md:grid-cols-1 gap-10">
+                  <TeamMember 
+                    name="Suryakamal B."
+                    title="Founder & CEO"
+                    bio="Suryakamal, Founder & CEO of iSpace, is an education pioneer passionate about redefining learning through hands-on, immersive experiences. Driven by the need to equip students for a future in STEM, technology, and space exploration, he launched iSpace to transcend conventional education and cultivate creativity, critical thinking, and problem-solving abilities. He understands the pivotal role space education plays in inspiring young minds, using practical exposure to astronomy, engineering, and space sciences to build curiosity, adaptability, and resilience—essential traits for thriving in a dynamic world. At iSpace, Suryakamal is dedicated to equipping students with the skills to innovate, discover, and spearhead the next wave of space trailblazers."
+                    profileLink="https://www.linkedin.com/in/suryakamal-bourisetty-8937a6112/"
+                    imageUrl={suryaImage}
+                  />
+                </div>
                 
-                <TeamMember 
-                  name="Dr. Yuvaraju Chinnam, Ph.D."
-                  title="Chief Innovation Officer"
-                  bio="Dr. Yuvaraju Chinnam, Co-Founder and Chief Innovation Officer at iSpace, channels his passion for nurturing space enthusiasts into groundbreaking educational programs. With a PhD and decades of experience in teaching and student mentorship, he has shaped academic initiatives globally, including as a Visiting Scholar at PennState University and a steering committee member at IEEE TALE 2023 in New Zealand. His diverse expertise in education and innovation drives iSpace's mission to inspire and equip the next generation of space scientists. At iSpace, Dr. Chinnam crafts strategic visions that blend hands-on learning with cutting-edge space exploration."
-                  profileLink="https://www.linkedin.com/in/dr-yuvaraju-chinnam-phd-bb228557/"
-                  imageUrl={yuvarajuImage}
-                />
+                <div className="grid md:grid-cols-2 gap-10 mt-10">
+                  <TeamMember 
+                    name="Dr. Yuvaraju Chinnam, Ph.D."
+                    title="Chief Innovation Officer"
+                    bio="Dr. Yuvaraju Chinnam, Co-Founder and Chief Innovation Officer at iSpace, channels his passion for nurturing space enthusiasts into groundbreaking educational programs. With a PhD and decades of experience in teaching and student mentorship, he has shaped academic initiatives globally, including as a Visiting Scholar at PennState University and a steering committee member at IEEE TALE 2023 in New Zealand. His diverse expertise in education and innovation drives iSpace's mission to inspire and equip the next generation of space scientists. At iSpace, Dr. Chinnam crafts strategic visions that blend hands-on learning with cutting-edge space exploration."
+                    profileLink="https://www.linkedin.com/in/dr-yuvaraju-chinnam-phd-bb228557/"
+                    imageUrl={yuvarajuImage}
+                  />
+                  
+                  <TeamMember 
+                    name="Dr. Iyyanki V. Murali Krishna"
+                    title="President"
+                    bio="Dr. Iyyanki V. Murali Krishna is a globally renowned expert in space technology, environmental management, and data analytics. With over four decades of experience spanning academia, government, and international collaboration, he has pioneered research and innovation in fields such as remote sensing, climate change, AI for sustainable development, and spatial epidemiology. An alumnus of IIT Madras and IISc Bangalore, he has held esteemed roles including Director of R&D at JNTU-Hyd, Senior Scientist at ISRO, and Senior Advisor at UC Berkeley's Haas Institute. He has been instrumental in shaping national policies and projects on climate resilience, disaster management, and smart village development, while mentoring over 40 PhD scholars. As President of iSpace, he brings visionary leadership and a commitment to advancing space education, innovation, and accessibility across the globe."
+                    profileLink="https://www.linkedin.com/in/iyyanki-v-muralikrishna/"
+                    imageUrl={iyyankiImage}
+                    extraInfo="M - Tech (IIT-Madras), Ph.D (IISc-Bangalore), FIE, FIS, FAPASc, FICDM, IEEE Life Member"
+                  />
+                </div>
               </div>
             </motion.section>
             

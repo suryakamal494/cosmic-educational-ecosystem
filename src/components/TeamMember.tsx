@@ -11,6 +11,7 @@ interface TeamMemberProps {
   profileLink: string;
   imageUrl: string;
   badgeUrl?: string;
+  extraInfo?: string;
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({
@@ -19,7 +20,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   bio,
   profileLink,
   imageUrl,
-  badgeUrl
+  badgeUrl,
+  extraInfo
 }) => {
   return (
     <motion.div 
@@ -74,6 +76,13 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                   <Award className="w-4 h-4 mr-2" />
                   <span className="font-medium text-sm">{title}</span>
                 </div>
+                
+                {/* Extra info/credentials if provided */}
+                {extraInfo && (
+                  <div className="mt-2 text-gray-300 text-xs italic border-l-2 border-space-purple/30 pl-3">
+                    {extraInfo}
+                  </div>
+                )}
               </div>
               
               <div className="bg-space-blue-light/20 backdrop-blur-sm rounded-lg p-4 border border-space-purple/20 mb-4">
