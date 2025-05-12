@@ -1,4 +1,3 @@
-
 import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
@@ -27,6 +26,9 @@ const Team = () => {
   const josephImage = "/lovable-uploads/c77a7e27-a377-44c4-b774-4b3722ade982.png";
   const blairImage = "/lovable-uploads/9f6d891a-07cc-406a-964a-1e398d0a5290.png";
   const kenImage = "/lovable-uploads/397eedea-3e25-4583-8bd2-c29f136d010e.png";
+
+  // Adding Orly Blumberg's profile
+  const orlyImage = "/lovable-uploads/f5e1fc64-ed01-4b5f-9f79-6ab919656fa7.png"; // Using a placeholder image, update when you have her actual image
 
   return (
     <div className="min-h-screen bg-space-blue text-white">
@@ -171,6 +173,15 @@ const Team = () => {
                     profileLink="#"
                     imageUrl={elisabethImage}
                     badgeUrl={finlandFlagBadge}
+                  />
+                  
+                  <TeamMember 
+                    name="Orly Blumberg"
+                    title="Mentor for Educational Innovation"
+                    bio="Orly Blumberg brings her extensive expertise in educational innovation and curriculum development to iSpace as a valued mentor. With a passion for creating transformative learning experiences, she has developed and implemented successful educational programs across multiple countries. Her approach combines the latest research in learning methodologies with practical, hands-on applications, particularly in STEM fields. At iSpace, Orly provides critical guidance on educational strategy and program development, helping to ensure that our curriculum remains cutting-edge, engaging, and effective in inspiring the next generation of space enthusiasts and innovators."
+                    profileLink="#"
+                    imageUrl={orlyImage}
+                    badgeUrl={usaFlagBadge}
                   />
                 </div>
               </div>
