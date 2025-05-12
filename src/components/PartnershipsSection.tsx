@@ -14,7 +14,7 @@ const PartnershipsSection: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
         
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20">
+        <div className="grid md:grid-cols-3 gap-8 items-center justify-center">
           {/* Maxme */}
           <Link 
             to="/partnerships/maxme" 
@@ -46,6 +46,23 @@ const PartnershipsSection: React.FC = () => {
             </div>
             <span className="mt-4 text-xl font-semibold group-hover:text-space-purple-light transition-colors">
               Taramandal
+            </span>
+          </Link>
+          
+          {/* Centurion University */}
+          <Link 
+            to="/partnerships/centurion" 
+            className="group relative flex flex-col items-center transition-transform hover:scale-105"
+          >
+            <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg p-4 shadow-lg">
+              <img 
+                src="/lovable-uploads/555d04bc-f6f4-4fb6-9b57-e6ff9cffa707.png" 
+                alt="Centurion University Logo" 
+                className="w-full"
+              />
+            </div>
+            <span className="mt-4 text-xl font-semibold group-hover:text-space-purple-light transition-colors">
+              Centurion University
             </span>
           </Link>
         </div>

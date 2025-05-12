@@ -18,7 +18,8 @@ const navItems = [
     dropdown: true,
     children: [
       { label: 'Maxme', path: '/partnerships/maxme' },
-      { label: 'Taramandal', path: '/partnerships/taramandal' }
+      { label: 'Taramandal', path: '/partnerships/taramandal' },
+      { label: 'Centurion University', path: '/partnerships/centurion' }
     ]
   },
   { label: 'Command Crew', path: '/team' },

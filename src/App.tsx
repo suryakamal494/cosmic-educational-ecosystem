@@ -17,6 +17,7 @@ const Astronomy = lazy(() => import("./pages/Astronomy"));
 const Labs = lazy(() => import("./pages/Labs"));
 const Maxme = lazy(() => import("./pages/Maxme"));
 const Taramandal = lazy(() => import("./pages/Taramandal"));
+const CenturionUniversity = lazy(() => import("./pages/CenturionUniversity"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Preload important pages after main content loads
@@ -83,6 +84,7 @@ const AppRoutes = () => {
           <Route path="/labs" element={<Labs />} />
           <Route path="/partnerships/maxme" element={<Maxme />} />
           <Route path="/partnerships/taramandal" element={<Taramandal />} />
+          <Route path="/partnerships/centurion" element={<CenturionUniversity />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
