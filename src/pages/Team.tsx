@@ -184,7 +184,7 @@ const Team = () => {
                   <TeamMember 
                     name="Orly Blumberg"
                     title="Mentor for Educational Innovation"
-                    bio="Orly Blumberg brings her extensive expertise in educational innovation and curriculum development to iSpace as a valued mentor. With a passion for creating transformative learning experiences, she has developed and implemented successful educational programs across multiple countries. As Project Manager at Tel Aviv University and Project and Marketing Manager at the Herzliya Science Center, she actively leads educational initiatives such as the TEVEL satellite program, fostering collaboration between students and industry partners like Amazon Web Services. At iSpace, Orly provides critical guidance on educational strategy and program development, helping to ensure that our curriculum remains cutting-edge, engaging, and effective in inspiring the next generation of space enthusiasts and innovators."
+                    bio="Project Manager at Tel Aviv University and also serves as the Project and Marketing Manager at the Herzliya Science Center. She actively leads educational initiatives, such as the TEVEL satellite program, fostering collaboration between students and industry partners like Amazon Web Services."
                     profileLink="https://www.linkedin.com/in/orly-blumberg-8a542a38/"
                     imageUrl={orlyImage}
                     badgeUrl={israelFlagBadge}
