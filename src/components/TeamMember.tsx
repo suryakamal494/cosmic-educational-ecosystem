@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, Shield, Award, Star } from 'lucide-react';
+import { Linkedin, Shield, Award, Star, Flag } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
 
@@ -12,6 +12,7 @@ interface TeamMemberProps {
   imageUrl: string;
   badgeUrl?: string;
   extraInfo?: string;
+  flagName?: string;
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({
@@ -21,7 +22,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   profileLink,
   imageUrl,
   badgeUrl,
-  extraInfo
+  extraInfo,
+  flagName
 }) => {
   return (
     <motion.div 
@@ -51,11 +53,11 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-space-blue/80 to-transparent opacity-60"></div>
               </div>
               
-              {/* Country Flag Badge (if provided) - Changed to square */}
+              {/* Badge - Country Flag or Shield Icon */}
               {badgeUrl ? (
                 <div className="absolute -right-2 -bottom-2 bg-space-purple/80 rounded-md p-1 shadow-xl">
                   <div className="h-8 w-8 overflow-hidden">
-                    <img src={badgeUrl} alt="Country Flag" className="h-full w-full object-cover" />
+                    <img src={badgeUrl} alt={flagName || "Country Flag"} className="h-full w-full object-cover" />
                   </div>
                 </div>
               ) : (

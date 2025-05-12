@@ -1,3 +1,4 @@
+
 import React from 'react';
 import StarryBackground from '@/components/StarryBackground';
 import Navbar from '@/components/Navbar';
@@ -27,8 +28,9 @@ const Team = () => {
   const blairImage = "/lovable-uploads/9f6d891a-07cc-406a-964a-1e398d0a5290.png";
   const kenImage = "/lovable-uploads/397eedea-3e25-4583-8bd2-c29f136d010e.png";
 
-  // Adding Orly Blumberg's profile
-  const orlyImage = "/lovable-uploads/f5e1fc64-ed01-4b5f-9f79-6ab919656fa7.png"; // Using a placeholder image, update when you have her actual image
+  // Updated Orly profile with new image and Israeli flag
+  const orlyImage = "/lovable-uploads/6b133a0e-8566-4385-a61a-57cc96c1bc70.png";
+  const israelFlagBadge = "/lovable-uploads/9d132cb0-0cce-4b64-9a4f-c00898ad63c7.png";
 
   return (
     <div className="min-h-screen bg-space-blue text-white">
@@ -133,6 +135,7 @@ const Team = () => {
                     profileLink="#"
                     imageUrl={josephImage}
                     badgeUrl={usaFlagBadge}
+                    flagName="USA Flag"
                   />
                   
                   <TeamMember 
@@ -142,6 +145,7 @@ const Team = () => {
                     profileLink="https://www.thealumniassociation.com/home/4839394-james-maddirala/profile"
                     imageUrl={jamesImage}
                     badgeUrl={usaFlagBadge}
+                    flagName="USA Flag"
                   />
                 </div>
                 
@@ -153,6 +157,7 @@ const Team = () => {
                     profileLink="#"
                     imageUrl={blairImage}
                     badgeUrl={usaFlagBadge}
+                    flagName="USA Flag"
                   />
                   
                   <TeamMember 
@@ -162,6 +167,7 @@ const Team = () => {
                     profileLink="https://news.sou.edu/2020/05/sou-ken-kempner-studies-role-women-faculty-saudi-universities/"
                     imageUrl={kenImage}
                     badgeUrl={usaFlagBadge}
+                    flagName="USA Flag"
                   />
                 </div>
                 
@@ -173,15 +179,17 @@ const Team = () => {
                     profileLink="#"
                     imageUrl={elisabethImage}
                     badgeUrl={finlandFlagBadge}
+                    flagName="Finland Flag"
                   />
                   
                   <TeamMember 
                     name="Orly Blumberg"
                     title="Mentor for Educational Innovation"
-                    bio="Orly Blumberg brings her extensive expertise in educational innovation and curriculum development to iSpace as a valued mentor. With a passion for creating transformative learning experiences, she has developed and implemented successful educational programs across multiple countries. Her approach combines the latest research in learning methodologies with practical, hands-on applications, particularly in STEM fields. At iSpace, Orly provides critical guidance on educational strategy and program development, helping to ensure that our curriculum remains cutting-edge, engaging, and effective in inspiring the next generation of space enthusiasts and innovators."
+                    bio="Orly Blumberg brings her extensive expertise in educational innovation and curriculum development to iSpace as a valued mentor. With a passion for creating transformative learning experiences, she has developed and implemented successful educational programs across multiple countries. As Project Manager at Tel Aviv University and Project and Marketing Manager at the Herzliya Science Center, she actively leads educational initiatives such as the TEVEL satellite program, fostering collaboration between students and industry partners like Amazon Web Services. At iSpace, Orly provides critical guidance on educational strategy and program development, helping to ensure that our curriculum remains cutting-edge, engaging, and effective in inspiring the next generation of space enthusiasts and innovators."
                     profileLink="#"
                     imageUrl={orlyImage}
-                    badgeUrl={usaFlagBadge}
+                    badgeUrl={israelFlagBadge}
+                    flagName="Israel Flag"
                   />
                 </div>
               </div>
