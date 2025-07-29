@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 
 const Team = () => {
   // Updated images - Using the newly uploaded images
-  const yuvarajuImage = "/lovable-uploads/c19eeb1b-0266-4464-8f65-35174d84746c.png";
   const suryaImage = "/lovable-uploads/9064b016-2d31-4347-b027-279138549637.png";
   
   // Keep the USA flag for specific profiles
@@ -92,15 +91,7 @@ const Team = () => {
                   />
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-10 mt-10">
-                  <TeamMember 
-                    name="Dr. Yuvaraju Chinnam, Ph.D."
-                    title="Chief Innovation Officer"
-                    bio="Dr. Yuvaraju Chinnam, Co-Founder and Chief Innovation Officer at iSpace, channels his passion for nurturing space enthusiasts into groundbreaking educational programs. With a PhD and decades of experience in teaching and student mentorship, he has shaped academic initiatives globally, including as a Visiting Scholar at PennState University and a steering committee member at IEEE TALE 2023 in New Zealand. His diverse expertise in education and innovation drives iSpace's mission to inspire and equip the next generation of space scientists. At iSpace, Dr. Chinnam crafts strategic visions that blend hands-on learning with cutting-edge space exploration."
-                    profileLink="https://www.linkedin.com/in/dr-yuvaraju-chinnam-phd-bb228557/"
-                    imageUrl={yuvarajuImage}
-                  />
-                  
+                <div className="grid md:grid-cols-1 gap-10 mt-10">
                   <TeamMember 
                     name="Dr. Iyyanki V. Murali Krishna"
                     title="President"
